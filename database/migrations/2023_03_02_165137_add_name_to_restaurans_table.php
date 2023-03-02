@@ -12,9 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('restaurants', function (Blueprint $table) {
-            //relazione One to One con users
-            $table->unsignedBigInteger("user_id")->nullable();
-            $table->foreign("user_id")->references("id")->on("users");
+            $table->dropColumn("name");
+            $table->string('restaurant_name')->after('id')->default('testodiprova');
         });
     }
 
@@ -24,8 +23,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('restaurants', function (Blueprint $table) {
-            $table->dropForeign("restaurants_user_id_foreign");
-            $table->dropColumn("user_id");
+            $table->string("name");
+            $table->dropColumn('restaurant_name');
         });
     }
 };
