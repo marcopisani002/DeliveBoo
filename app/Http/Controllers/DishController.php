@@ -6,6 +6,8 @@ use App\Models\Dish;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
+use Illuminate\Support\Facades\Storage;
+
 
 class DishController extends Controller
 {
@@ -40,10 +42,10 @@ class DishController extends Controller
     {
         $data = $request->validated();
 
-        // $path = Storage::put("dishes", $data["cover_img"]);
+        $path = Storage::put("dishes", $data["cover_img"]);
 
         $dishes->fill($data);
-        // $dishes->cover_img = $path;
+        $dishes->cover_img = $path;
         $dishes->save();
 
         if($request->status == 'on'){
@@ -92,9 +94,9 @@ class DishController extends Controller
     {
         $dishes = Dish::findOrFail($id);
 
-        // if ($dishes->cover_img) {
-        //     Storage::delete($dishes->cover_img);
-        // }
+        if ($dishes->cover_img) {
+            Storage::delete($dishes->cover_img);
+        }
 
         $dishes->delete();
 
