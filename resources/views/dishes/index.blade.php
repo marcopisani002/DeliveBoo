@@ -23,7 +23,7 @@
 
                             <button class="btn btn-info"> <a href="{{route('dishes.edit', $dishes->id)}}" class="text-decoration-none">Modify</a></button>
 
-                            <form action="{{ route('restaurants.dishes.destroy', $dishes->id) }}" method="POST" id="form-delete">
+                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
                                 @csrf()
                                 @method('delete')
 
@@ -32,7 +32,6 @@
                                 </button>
                             </form>
                             
-
                             <script>
                                 const form = document.getElementById("form-delete");
                                 form.addEventListener("submit", function(e) {
@@ -44,8 +43,6 @@
                                 })
 
                             </script>
-
-
                         </div>
                     </div>
                 </div>

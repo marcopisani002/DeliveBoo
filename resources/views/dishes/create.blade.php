@@ -20,7 +20,7 @@
         <div class="col-12 mt-5 justify-content-center">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{route('restaurants.dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{route('dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
                 @csrf
 
         {{-- INPUT NOME --}}
@@ -115,9 +115,6 @@
                     <input value="1" class="form-check-input" type="checkbox" name="hide" role="switch" id="flexSwitchCheckDefault"
                     {{ ( 'hide' == 1) ? 'checked' : '' }}>
                 </div>
-
-
-
 
 
         {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}

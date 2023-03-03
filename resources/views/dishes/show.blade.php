@@ -21,7 +21,7 @@
                             <p class="btn btn-primary">{{$dish->price}}</p>
                             
                             <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
-                            <form action="{{ route('restaurants.dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
+                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
                                 @csrf()
                                 @method('delete')
 
