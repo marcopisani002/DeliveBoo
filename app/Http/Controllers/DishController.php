@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dish;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
@@ -16,7 +17,12 @@ class DishController extends Controller
      */
     public function index()
     {
+        //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
+        // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
         $dishes = Dish::all();
+        $users = User::all();
+        $user_id = auth()->user()->id;
+        $dishes = Dish::where('restaurant_id', $user_id)->get();
 
         return view('dishes.index', [
             'dishes' => $dishes,
@@ -48,8 +54,6 @@ class DishController extends Controller
         $dish->fill($data);
         $dish->cover_img = $path;
         $dish->save();
-
-
 
         return redirect()->route("dishes.show", compact('dishes'));
     }

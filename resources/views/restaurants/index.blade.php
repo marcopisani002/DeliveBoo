@@ -15,6 +15,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>N</th>
           <th>Nome</th>
           <th>Numero di telefono</th>
           <th>Immagine del ristorante</th>
@@ -27,6 +28,7 @@
       <tbody>
         @foreach ($restaurants as $restaurant)
           <tr>
+            <td>{{ $restaurant->id }}</td>
             <td>{{ $restaurant->name }}</td>
             <td>{{ $restaurant->phone_number }}</td>
             <td><img src="{{ asset('storage/' . $restaurant->cover_img) }}" alt=""></td>

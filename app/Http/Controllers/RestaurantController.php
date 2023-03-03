@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Restaurant;
 use App\Models\Type;
+use App\Models\Dish;
 use App\Models\User;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
@@ -21,11 +22,9 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::all();
         $types = Type::all();
-
-        return view ('restaurants.index', [
-            'restaurants'=> $restaurants,
-            'types'=>$types,
-            ]);
+        $users = User::all();
+    
+        return view("restaurants.index", compact('users', 'dishes','restaurants','types'));
     }
 
     /**
@@ -51,7 +50,7 @@ class RestaurantController extends Controller
         $restaurant = Restaurant::create([
             ...$data,
             "cover_img" => $path ?? '',
-             // // // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
+             // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
             "user_id" => Auth::id(),
          ]);
 
@@ -65,10 +64,7 @@ class RestaurantController extends Controller
             $restaurant->types()->attach($data["types"]);
         }
         
-        return redirect()->route('restaurants.show', [
-            'restaurant'=> $restaurant,
-            'types'=>$types,
-            ]);
+        return redirect()->route('restaurants.show', compact('restaurant','types'));
     }
 
     /**
