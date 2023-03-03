@@ -36,8 +36,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Route::middleware(['auth', 'verified'])
-    ->prefix('restaurants')
-    ->name('restaurants.')
     ->group(function () {
         Route::resource("dishes", DishController::class);
 });

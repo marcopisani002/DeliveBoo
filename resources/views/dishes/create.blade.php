@@ -20,7 +20,7 @@
         <div class="col-12 mt-5 justify-content-center">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{route('restaurants.dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{route('dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
                 @csrf
 
         {{-- INPUT NOME --}}
@@ -46,6 +46,7 @@
                     <label for="" class="form-label">Cover Image</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
+                @dump('cover_img')
 
                     @error('cover_img')
                     <div class="invalid-feedback">

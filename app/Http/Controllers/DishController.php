@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dish;
-use Illuminate\Http\Request;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -51,7 +51,7 @@ class DishController extends Controller
 
 
 
-        return redirect()->route("dishes.show", compact('dishes'));
+        return redirect()->route("dishes.show", compact('dish'));
     }
 
     /**
@@ -59,9 +59,9 @@ class DishController extends Controller
      */
     public function show($id)
     {
-        $dishes = Dish::findOrFail($id);
+        $dish = Dish::findOrFail($id);
 
-        return view('dishes.show', compact('dishes'));
+        return view('dishes.show', compact('dish'));
     }
 
     /**
@@ -80,10 +80,10 @@ class DishController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDishRequest $request, Dish $dishes)
+    public function update(UpdateDishRequest $request, Dish $dish)
     {
 
-        return redirect()->route("dishes.show", $dishes->id);
+        return redirect()->route("dishes.show", $dish->id);
     }
 
     /**
@@ -91,14 +91,14 @@ class DishController extends Controller
      */
     public function destroy($id)
     {
-        $dishes = Dish::findOrFail($id);
+        $dish = Dish::findOrFail($id);
 
-        if ($dishes->cover_img) {
-            Storage::delete($dishes->cover_img);
+        if ($dish->cover_img) {
+            Storage::delete($dish->cover_img);
         }
 
-        $dishes->delete();
+        $dish->delete();
 
-        return redirect()->route("dishes.index", $dishes->id);
+        return redirect()->route("dishes.index", $dish->id);
     }
 }

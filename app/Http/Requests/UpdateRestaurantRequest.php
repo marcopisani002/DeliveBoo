@@ -27,7 +27,7 @@ class UpdateRestaurantRequest extends FormRequest
             'cover_img'=>'required|string',
             'vat'=>'required|numeric|digits:11',
             'address'=>'required|string',
-            'user_id'=>'null'
+
         ];
     }
 }

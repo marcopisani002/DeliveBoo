@@ -23,11 +23,11 @@ class StoreDishRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255|string',
-            'cover_image' => 'required|image|max: 1024',
+            'cover_img' => 'required|image',
             'ingredients' => 'required|string',
-            'description' =>  'required|max: 300',
+            'description' => 'required|string',
             'price' => 'required|numeric',
-            'hide' => 'null|boolean',
+            'hide' => 'nullable|boolean',
         ];
     }
 }
