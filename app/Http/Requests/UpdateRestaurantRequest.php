@@ -22,7 +22,7 @@ class UpdateRestaurantRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'restaurant_name'=>'required|string|max:255',
+            'name'=>'required|string|max:255',
             'phone_number'=>'required|numeric|digits:12',
             'cover_img'=>'required|string',
             'vat'=>'required|numeric|digits:11',

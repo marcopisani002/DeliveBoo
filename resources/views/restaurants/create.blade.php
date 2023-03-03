@@ -7,8 +7,8 @@
         <div class="mb-3">
             <label class="form-label"><b>Nome</b></label>
             <input type="text"
-            class="form-control @error('restaurant_name') is-invalid @elseif(old('restaurant_name')) is-valid @enderror"
-            name="restaurant_name" value="{{ $errors->has('restaurant_name') ? '' : old('restaurant_name') }}">
+            class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror"
+            name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
 
         <div class="mb-3">
             <label class="form-label"><b>Numero di telefono</b></label>
