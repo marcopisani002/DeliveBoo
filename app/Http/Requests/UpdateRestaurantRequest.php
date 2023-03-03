@@ -23,11 +23,12 @@ class UpdateRestaurantRequest extends FormRequest
     {
         return [
             'name'=>'required|string|max:255',
-            'phone_number'=>'required|numeric|digits:12',
+            'phone_number'=>'required|numeric|digits:8',
             'cover_img'=>'required|string',
-            'vat'=>'required|numeric|digits:11',
+            'vat'=>'required|numeric|digits:8',
             'address'=>'required|string',
-            'user_id'=>'null'
+            'user_id'=>'null',
+            "types" => "nullable|array|exists:types,id"
         ];
     }
 }
