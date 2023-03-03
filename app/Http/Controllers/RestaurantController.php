@@ -88,7 +88,7 @@ class RestaurantController extends Controller
         $restaurant = restaurant::findOrFail($id);
         $types = Type::all();
 
-        return view('restaurant.edit',compact('restaurant','types'));
+        return view('restaurants.edit',compact('restaurant','types'));
     }
 
     /**
@@ -100,8 +100,7 @@ class RestaurantController extends Controller
         $restaurant = restaurant::findOrFail($id);
         $types = Type::all();
 
-        $restaurant->types()->sync($data["types"]);
-
+        
         if (key_exists("cover_img", $data)){   
             $path = Storage::put("restaurants", $data["cover_img"]);
             Storage::delete($restaurant->cover_img);
@@ -111,8 +110,9 @@ class RestaurantController extends Controller
             ...$data,
             "cover_img"=>$path ?? $restaurant->cover_img
         ]);
+        $restaurant->types()->sync($data["types"]);
 
-        return redirect()->view('restaurants.show',compact('restaurant','types'));
+        return redirect()->route('restaurants.show',compact('restaurant','types'));
     
     }
 

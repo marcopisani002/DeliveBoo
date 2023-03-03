@@ -19,7 +19,7 @@
     @vite(['resources/js/app.js'])
 </head>
 
-<body class="bg-success">
+<body class="bg-light">
     <div id="app">
 
 
@@ -45,6 +45,12 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/') }}">{{ __('Home') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/restaurants') }}">{{ __('Restaurants') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/dishes') }}">{{ __('Dishes') }}</a>
                         </li>
                     </ul>
 
