@@ -27,8 +27,12 @@ class StoreRestaurantRequest extends FormRequest
             'cover_img'=>'required|string',
             'vat'=>'required|numeric|digits:8',
             'address'=>'required|string',
+<<<<<<< HEAD
             'user_id'=>'null',
             "types" => "nullable|array|exists:types,id"
+=======
+
+>>>>>>> test
         ];
     }
 }

@@ -53,7 +53,7 @@ class RestaurantController extends Controller
             "cover_img" => $path ?? '',
              // // // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
             "user_id" => Auth::id(),
-         ]);
+        ]);
 
         $types = Type::all();
         $path = Storage::put("restaurant", $data["cover_img"]);

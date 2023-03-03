@@ -14,9 +14,14 @@ class Restaurant extends Model
         'cover_img',
         'vat',
         'address',
+<<<<<<< HEAD
         'type_id'
+=======
+        'user_id',
+>>>>>>> test
     ];
     use HasFactory;
+
     public function user(){
         return $this->belongsTo(User::class);
     }

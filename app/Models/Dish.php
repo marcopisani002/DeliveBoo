@@ -14,6 +14,7 @@ class Dish extends Model
         'description',
         'price',
         'hide',
+        'restaurant_id',
     ];
 
     use HasFactory;

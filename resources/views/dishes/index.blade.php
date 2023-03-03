@@ -19,11 +19,17 @@
                             <p class="card-text">{{$dish->description}}</p>
                             <p class="card-text">{{$dish->ingredients}}</p>
                             <p class="fs-3">{{$dish->price}}</p>
-                            <p class="fs-3">{{$dish->hide}}</p>
+                            {{-- HIDE --}}
+                            <div class="form-check form-switch">
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
+                                <input value="1" class="form-check-input" type="checkbox" name="hide" role="switch" id="flexSwitchCheckDefault" 
+                                {{ ( 'hide' == 1) ? 'checked' : '' }}>
+                            </div>
 
-                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dishes->id)}}" class="text-decoration-none">Modify</a></button>
 
-                            <form action="{{ route('restaurants.dishes.destroy', $dishes->id) }}" method="POST" id="form-delete">
+                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modify</a></button>
+
+                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
                                 @csrf()
                                 @method('delete')
 
