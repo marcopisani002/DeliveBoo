@@ -27,7 +27,7 @@
       <tbody>
         @foreach ($restaurants as $restaurant)
           <tr>
-            <td>{{ $restaurant->restaurant_name }}</td>
+            <td>{{ $restaurant->name }}</td>
             <td>{{ $restaurant->phone_number }}</td>
             <td><img src="{{ asset('storage/' . $restaurant->cover_img) }}" alt=""></td>
             <td>{{ $restaurant->vat }}</td>

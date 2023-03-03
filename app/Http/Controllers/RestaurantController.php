@@ -60,12 +60,15 @@ class RestaurantController extends Controller
 
         $restaurant->fill($data);
         $restaurant->save();
-
-        if ($request->has('types')){
+        
+        if (key_exists('types', $data)){
             $restaurant->types()->attach($data["types"]);
         }
-
-        return redirect()->route('restaurants.show',compact('restaurant','types'));
+        
+        return redirect()->route('restaurants.show', [
+            'restaurant'=> $restaurant,
+            'types'=>$types,
+            ]);
     }
 
     /**

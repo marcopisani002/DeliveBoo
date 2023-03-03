@@ -13,15 +13,21 @@
     <div class="row mx-5">
                 <div class="col-6 my-3">
                     <div class="card">
-                        <img src="{{ asset('storage/' . $dish['cover_img']) }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('storage/' . $restaurant['cover_img']) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$dish->name}}</h5>
-                            <p class="card-text">{{$dish->description}}</p>
-                            <p class="card-text">{{ $dish->ingredients }}</p>
-                            <p class="btn btn-primary">{{$dish->price}}</p>
-                            
-                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
-                            <form action="{{ route('restaurants.dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
+                            <h5 class="card-title"><b>Nome:</b> {{$restaurant->name}}</h5>
+                            <p class="card-text"><b>Numero di telefono:</b> {{$restaurant->phone_number}}</p>
+                            <p class="card-text"><b>P.IVA:</b> {{ $restaurant->vat }}</p>
+                            <p class="card-text"><b>Indirizzo:</b> {{ $restaurant->address }}</p>
+                            <p>
+                                <b>Tipologia:</b>
+                                @foreach ($restaurant->types as $type)
+                                {{ $type->name }}
+                                @endforeach
+                            </p>
+
+                            <button class="btn btn-info"> <a href="{{route('restaurants.edit', $restaurant->id)}}" class="text-decoration-none">Modifica</a></button>
+                            <form action="{{ route('restaurants.destroy', $restaurant->id) }}" method="POST" id="form-delete">
                                 @csrf()
                                 @method('delete')
 
@@ -42,8 +48,6 @@
                                 })
 
                             </script>
-
-
                         </div>
                     </div>
                 </div>

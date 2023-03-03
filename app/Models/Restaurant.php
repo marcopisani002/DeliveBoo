@@ -14,6 +14,7 @@ class Restaurant extends Model
         'cover_img',
         'vat',
         'address',
+        'type_id'
     ];
     use HasFactory;
     public function user(){
