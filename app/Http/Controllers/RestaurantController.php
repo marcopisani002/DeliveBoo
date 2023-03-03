@@ -23,6 +23,7 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::all();
         $types = Type::all();
         $users = User::all();
+        $dishes = Dish::all();
     
         return view("restaurants.index", compact('users', 'dishes','restaurants','types'));
     }

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid w90 m5-auto mt-3">
+<div class="container-fluid m5-auto mt-3">
   <h1 class="d-flex justify-content-between">
       Lista Ristoranti
 
@@ -22,6 +22,7 @@
           <th>P.IVA</th>
           <th>Indirizzo</th>
           <th>Tipologia</th>
+          <th>Azioni</th>
         </tr>
       </thead>
 

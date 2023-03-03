@@ -63,9 +63,9 @@ class DishController extends Controller
      */
     public function show($id)
     {
-        $dishes = Dish::findOrFail($id);
+        $dish = Dish::findOrFail($id);
 
-        return view('dishes.show', compact('dishes'));
+        return view('dishes.show', compact('dish'));
     }
 
     /**
