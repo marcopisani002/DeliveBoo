@@ -38,19 +38,18 @@ class DishController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreDishRequest $request, Dish $dishes)
+    public function store(StoreDishRequest $request, Dish $dish)
     {
         $data = $request->validated();
 
-        $path = Storage::put("dishes", $data["cover_img"]);
+        $path = Storage::put("dish", $data["cover_img"]);
+        
 
-        $dishes->fill($data);
-        $dishes->cover_img = $path;
-        $dishes->save();
+        $dish->fill($data);
+        $dish->cover_img = $path;
+        $dish->save();
 
-        if($request->status == 'on'){
-            
-        }
+
 
         return redirect()->route("dishes.show", compact('dishes'));
     }

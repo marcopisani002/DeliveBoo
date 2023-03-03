@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('restaurant_type', function (Blueprint $table) {
             //relazione Many to Many tra restaurants e types
+            $table->id();
             $table->unsignedBigInteger("restaurant_id");
             $table->foreign("restaurant_id")->references("id")->on("restaurants");
 

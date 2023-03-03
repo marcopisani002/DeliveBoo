@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('dishes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('cover_img');
+            $table->string('cover_img')->nullable();
             $table->text('ingredients');
             $table->text('description');
             $table->float('price');
-            $table->boolean('hide')->default(true);
+            $table->boolean('hide')->default(false);
             $table->timestamps();
         });
     }
