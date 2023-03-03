@@ -20,7 +20,7 @@
         <div class="col-12 mt-5 justify-content-center">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{route('restaurants.dishes.update') }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{route('dishes.update') }} " class="row g-3" method="POST" enctype="multipart/form-data">
                 @csrf
 
         {{-- INPUT NOME --}}
