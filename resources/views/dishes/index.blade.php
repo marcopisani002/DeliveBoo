@@ -15,19 +15,13 @@
                     <div class="card text-bg-success">
                         <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$dish->name}}</h5>
-                            <p class="card-text">{{$dish->description}}</p>
-                            <p class="card-text">{{$dish->ingredients}}</p>
-                            <p class="fs-3">{{$dish->price}}</p>
-                            {{-- HIDE --}}
-                            <div class="form-check form-switch">
-                                <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
-                                <input value="1" class="form-check-input" type="checkbox" name="hide" role="switch" id="flexSwitchCheckDefault" 
-                                {{ ( 'hide' == 1) ? 'checked' : '' }}>
-                            </div>
+                            <h5 class="card-title"><b>ID:</b> {{$dish->id}}</h5>
+                            <h5 class="card-title"><b>Nome:</b> {{$dish->name}}</h5>
+                            <p class="card-text"><b>Descrizione:</b> {{$dish->description}}</p>
+                            <p class="card-text"><b>Ingredienti:</b> {{$dish->ingredients}}</p>
+                            <p class="card-text"><b>Prezzo:</b> €{{$dish->price}}</p>
 
-
-                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modify</a></button>
+                             <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modify</a></button>
 
                             <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
                                 @csrf()
@@ -38,7 +32,6 @@
                                 </button>
                             </form>
                             
-
                             <script>
                                 const form = document.getElementById("form-delete");
                                 form.addEventListener("submit", function(e) {
@@ -50,8 +43,6 @@
                                 })
 
                             </script>
-
-
                         </div>
                     </div>
                 </div>

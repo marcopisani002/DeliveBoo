@@ -14,11 +14,11 @@ class Dish extends Model
         'description',
         'price',
         'hide',
-        'restaurant_id',
+        'restaurant_id'
     ];
 
     use HasFactory;
-    public function restaurant(){
+    public function restaurants(){
         return $this->belongsTo(Restaurant::class);
         
     }

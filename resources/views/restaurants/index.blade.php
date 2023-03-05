@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-fluid w90 m5-auto mt-3">
+<div class="container-fluid m5-auto mt-3">
   <h1 class="d-flex justify-content-between">
       Lista Ristoranti
 
@@ -15,18 +15,21 @@
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>N</th>
           <th>Nome</th>
           <th>Numero di telefono</th>
           <th>Immagine del ristorante</th>
           <th>P.IVA</th>
           <th>Indirizzo</th>
           <th>Tipologia</th>
+          <th>Azioni</th>
         </tr>
       </thead>
 
       <tbody>
         @foreach ($restaurants as $restaurant)
           <tr>
+            <td>{{ $restaurant->id }}</td>
             <td>{{ $restaurant->name }}</td>
             <td>{{ $restaurant->phone_number }}</td>
             <td><img src="{{ asset('storage/' . $restaurant->cover_img) }}" alt=""></td>

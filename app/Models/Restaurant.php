@@ -14,7 +14,7 @@ class Restaurant extends Model
         'cover_img',
         'vat',
         'address',
-<<<<<<< HEAD
+        'user_id',
         'type_id'
 =======
         'user_id',
