@@ -25,7 +25,7 @@
 
         {{-- INPUT NOME --}}
                 <div class="col-md-6">
-                    <label for="text" class="form-label">Name</label>
+                    <label for="text" class="form-label">Name *</label>
                     <input type="text" placeholder="Name of the Dish" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
 
                     {{-- Messaggio  --}}
@@ -43,7 +43,7 @@
 
         {{-- INPUT IMMAGINE --}}
                 <div class="col-md-6">
-                    <label for="" class="form-label">Cover Image</label>
+                    <label for="" class="form-label">Cover Image *</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
 
@@ -57,7 +57,7 @@
 
         {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="text" class="form-label">Description</label>
+                    <label for="text" class="form-label">Description *</label>
                     <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror" placeholder="Description" name="description">{{ old('description') }}</textarea>
 
                     {{-- Messaggio  --}}
@@ -75,7 +75,7 @@
 
             {{-- INPUT INGREDIENTS--}}
                 <div class="col-12">
-                    <label for="text" class="form-label">Ingredients</label>
+                    <label for="text" class="form-label">Ingredients *</label>
                     <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Ingredients" name="ingredients">{{ old('ingredients') }}</textarea>
 
                     {{-- Messaggio  --}}
@@ -93,7 +93,7 @@
 
         {{-- INPUT PRICE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Price</label>
+                    <label for="" class="form-label">Price *</label>
                     <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
 
                     {{-- Messaggio  --}}

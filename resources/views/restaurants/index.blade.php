@@ -17,9 +17,9 @@
                         <img src="{{ asset('storage/' . $restaurant['cover_img']) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Nome: {{ $restaurant->name }}</h5>
-                            <p class="card-text">Numero di telefono: {{ $restaurant->phone_number }}</p>
-                            <p class="card-text">P.IVA: {{ $restaurant->vat }}</p>
-                            <p class="card-text">Indirizzo: {{ $restaurant->address }}</p>
+                            <p class="card-text"><b>Numero di telefono:</b> {{ $restaurant->phone_number }}</p>
+                            <p class="card-text"><b>P.IVA:</b> {{ $restaurant->vat }}</p>
+                            <p class="card-text"><b>Indirizzo:</b> {{ $restaurant->address }}</p>
                             <p>
                                 <b>Tipologia:</b>
                                 @foreach ($restaurant->types as $type)
