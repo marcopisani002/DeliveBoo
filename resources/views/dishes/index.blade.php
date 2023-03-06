@@ -21,8 +21,8 @@
         <div class="row mx-5">
             @foreach ( $dishes as $dish )
                 <div class="col-3 my-3">
-                    <div class="card bg-form">
-                        <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top" alt="...">
+                    <div class="card h-100 bg-form">
+                        <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top h-50" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"><b>ID: </b>{{$dish->id}}</h5>
                             <h5 class="card-title"><b>Nome: </b>{{$dish->name}}</h5>
