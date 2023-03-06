@@ -17,10 +17,10 @@
 
 
     <div class="row">
-        <div class="col-12 mt-5 justify-content-center">
+        <div class="col-12 mt-5 justify-content-center bg-form">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{ route('dishes.update', $dish->id) }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{ route('dishes.update', $dish->id) }} " class="row g-3 p-3 py-4" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method(PUT)
 

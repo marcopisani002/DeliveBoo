@@ -1,71 +1,46 @@
-@extends('layouts.app');
-
+@extends('layouts.app')
 
 @section('content')
+<main class="container-fluid">
+    <div class="container-fluid text-start">
+        <button class="btn btn-warning m-3" class="text-decoration-none text-white">
+            <a href="{{route('dashboard')}}">
+                Back to Dashboard
+            </a>
+        </button>
+    </div>
 
-<div class="container-fluid m5-auto mt-3">
-  <h1 class="d-flex justify-content-between">
-      Lista Ristoranti
+    <div class="row mx-5 justify-content-center bg-form">
+        @foreach ($restaurants as $restaurant )
+        <div class="col-5 my-3">
+            <div class="card">
+                <img src="{{ asset('storage/' . $restaurant['cover_img']) }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Nome: {{$restaurant->name}}</h5>
+                    <p class="card-text">Numero di telefono: {{$restaurant->phone_number}}</p>
+                    <p class="card-text">P.IVA: {{ $restaurant->vat }}</p>
+                    <p class="card-text">Indirizzo: {{ $restaurant->address }}</p>
+                    <p>
+                        <b>Tipologia:</b>
+                        @foreach ($restaurant->types as $type)
+                        <span class="badge rounded-pill text-bg-success">{{ $type->name }}</span>
+                        @endforeach
+                    </p>
 
-    </h1>
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>N</th>
-          <th>Nome</th>
-          <th>Numero di telefono</th>
-          <th>Immagine del ristorante</th>
-          <th>P.IVA</th>
-          <th>Indirizzo</th>
-          <th>Tipologia</th>
-          <th>Azioni</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        @foreach ($restaurants as $restaurant)
-          <tr>
-            <td>{{ $restaurant->id }}</td>
-            <td>{{ $restaurant->name }}</td>
-            <td>{{ $restaurant->phone_number }}</td>
-            <td><img src="{{ asset('storage/' . $restaurant->cover_img) }}" alt=""></td>
-            <td>{{ $restaurant->vat }}</td>
-            <td>{{ $restaurant->address }}</td>
-            <td>
-              @foreach ($restaurant->types as $type)
-                {{ $type->name }}
-              @endforeach
-            </td>
-            <td>
-              <a href="{{ route('restaurants.show', $restaurant->id) }}" class="btn btn-link">
-                <i class="fas fa-eye"></i>
-              </a>
-
-              <a href="{{ route('restaurants.edit', $restaurant->id) }}" class="btn btn-link">
-                <i class="fa-solid fa-pencil"></i>      
-              </a>
-
-              <form method='POST' action="{{ route('restaurants.destroy', $restaurant->id) }}"
-                  class="delete-form d-inline-block">
-                  @csrf()
-                  @method('delete')
-
-                  <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
-              </form>
-            </td>
-          </tr>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 m-3">
+                <button class="btn btn-primary my-bg-green border-0">
+                    <a href="{{ route('restaurants.create') }}" class="text-decoration-none text-white {{ $restaurant->id > 1 ? 'disabled' : ''}}">
+                        <i class="fas fa-plus"></i>
+                        Aggiungi
+                    </a>
+                </button>
+            </div>
+        </div>
         @endforeach
-      </tbody>
-    </table>  
-
-          <a href="{{ route('restaurants.create') }}" class="btn btn-primary ">
-              <i class="fas fa-plus"></i>
-              Aggiungi
-          </a>
-
-
-    {{-- {{ $restaurants->links() }} --}}
-
-  </div>
+    </div>
+</main>
 @endsection

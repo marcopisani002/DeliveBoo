@@ -3,15 +3,15 @@
 @section('content')
     <main class="container-fluid vh-100">
 
-        <div class="container-fluid text-start">
+        <div class="container-fluid ">
 
-            <button class="btn btn-warning m-3" class="text-decoration-none text-white">
-                <a href="{{route('dashboard')}}">
+            <button class="btn bg-none m-3 text-start">
+                <a href="{{route('dashboard')}}" class="text-decoration-none text-white">
                     Back to Dashboard
                 </a>
             </button>
 
-            <button class="btn btn-info"> 
+            <button class="btn btn-info text-center"> 
             <a href="{{route('dishes.create')}}" class="text-decoration-none">
                 Add a dish to your menu
             </a>
@@ -21,14 +21,14 @@
         <div class="row mx-5">
             @foreach ( $dishes as $dish )
                 <div class="col-3 my-3">
-                    <div class="card text-bg-success">
+                    <div class="card bg-form">
                         <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><b>ID:</b> {{$dish->id}}</h5>
-                            <h5 class="card-title"><b>Nome:</b> {{$dish->name}}</h5>
-                            <p class="card-text"><b>Descrizione:</b> {{$dish->description}}</p>
-                            <p class="card-text"><b>Ingredienti:</b> {{$dish->ingredients}}</p>
-                            <p class="card-text"><b>Prezzo:</b> €{{$dish->price}}</p>
+                            <h5 class="card-title">ID: {{$dish->id}}</h5>
+                            <h5 class="card-title">Nome: {{$dish->name}}</h5>
+                            <p class="card-text">Descrizione: {{$dish->description}}</p>
+                            <p class="card-text">Ingredienti:{{$dish->ingredients}}</p>
+                            <p class="card-text">Prezzo: € {{$dish->price}}</p>
                             <p>Hide: {{$dish->hide == true ? 'on' : 'off'}}</p>
 
 
