@@ -22,7 +22,7 @@
         {{-- INIZIO FORM --}}
             <form action=" {{ route('dishes.update', $dish->id) }} " class="row g-3 p-3 py-4" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method(PUT)
+                @method('PUT')
 
         {{-- INPUT NOME --}}
                 <div class="col-md-6">
@@ -75,15 +75,15 @@
 
             {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Description</label>
-                    <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror" placeholder="Description" name="description">{{ old('description') }}</textarea>
+                    <label for="" class="form-label">Ingredients</label>
+                    <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Ingredients" name="ingredients">{{ old('ingredients') }}</textarea>
 
                     {{-- Messaggio  --}}
-                    @error('description')
+                    @error('ingredients')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
-                    @elseif(old('description'))
+                    @elseif(old('ingredients'))
                     <div class="valid-feedback">
                         Nice work dude!
                     </div>
@@ -94,7 +94,7 @@
         {{-- INPUT PRICE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Price</label>
-                    <input type="number" class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
+                    <input type="number" step=".01"  class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
 
                     {{-- Messaggio  --}}
                     @error('price')
@@ -109,11 +109,12 @@
                 </div>
                 
 
-                {{-- HIDE --}}
-                <div class="form-check form-switch">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
-                    <input name="hide" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                </div>
+            <div class="form-check form-switch">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
+                <input value="1" class="form-check-input" type="checkbox" name="hide" role="switch" id="flexSwitchCheckDefault" 
+                {{ ( 'hide' == 1) ? 'checked' : '' }}>
+            </div>
+
 
 
 
