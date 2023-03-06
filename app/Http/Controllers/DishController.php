@@ -28,7 +28,7 @@ class DishController extends Controller
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            'users' => $user,
+            
         ]);
     }
 
@@ -49,19 +49,30 @@ class DishController extends Controller
      */
     public function store(StoreDishRequest $request, Dish $dish)
     {
-        $data = $request->validated();
+        // $user = Auth::user();
+         $data = $request->validated();
 
-        $path = Storage::put("dish", $data["cover_img"]);
+         $path = Storage::put("dish", $data["cover_img"]);
         
 
-        $dish->fill($data);
+         $dish->fill($data);
+        //$dish->cover_img = $path;
+        // $dish->save();
+
+
+        $user = Auth::user();
+        $dish = new Dish;
         $dish->cover_img = $path;
+        $dish->name = $request->name;
+        $dish->description = $request->description;
+        $dish->ingredients = $request->ingredients;
+        $dish->price = $request->price;
+        $dish->restaurant_id = $user->id;
         $dish->save();
+    
+        return redirect()->route('dishes.index');
 
-
-
-
-        return redirect()->route("dishes.show", compact('dish'));
+       // return redirect()->route("dishes.show", compact('dish'));
     }
 
     /**
