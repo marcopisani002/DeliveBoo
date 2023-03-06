@@ -12,6 +12,7 @@
                         @csrf
 
                         <div class="mb-4 row">
+                            <small class="mb-5 text-secondary">I campi con <strong class="text-black">(*)</strong> sono obbligatori</small>
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}*</label>
 
                             <div class="col-md-6">
