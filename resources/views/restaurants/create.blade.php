@@ -48,6 +48,9 @@
                     <div class="mb-3">
                         <div class="mb-1">Tipologie di cucina *</div>
                         @foreach ($types as $type)
+                <div class="mb-3">
+                    <div class="mb-1">Tipologie di cucina</div>
+                     @foreach ($types as $type)
                         <div class="form-check form-check-inline @error('types') is-invalid @enderror">
                             <input class="form-check-input @error('types') is-invalid @enderror" type="checkbox" id="CheckType {{ $loop->index }}" value="{{ $type->id }}" name="types[]" {{ in_array( $type->id, old('types', [])) ? 'checked' : '' }}>
                             <label class="form-check-label" for="CheckType {{ $loop->index }}">{{ $type->name }}</label>
