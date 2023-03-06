@@ -118,7 +118,7 @@
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
 
-                    <button class="btn bg-none m-3">
+                    <button class="btn bg-warning m-3">
                         <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
                             Back 
                         </a>

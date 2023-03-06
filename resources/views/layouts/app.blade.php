@@ -52,11 +52,11 @@
                         </li>
                             
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ url('restaurants')}}">{{ __('Restaurant') }}</a>
+                            <a class="nav-link text-white" href="{{ url('restaurants')}}">{{ __('Il tuo ristorante') }}</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{url('dishes') }}">{{ __('Dishes') }}</a>
+                            <a class="nav-link text-white" href="{{url('dishes') }}">{{ __('I tuoi piatti') }}</a>
                         </li>
                     </ul>
 
