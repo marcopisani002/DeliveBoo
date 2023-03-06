@@ -4,11 +4,12 @@
     <div class="container bg-form p-4 m-5">
         <form class="text-white " enctype="multipart/form-data" action="{{ route('restaurants.store') }}" method="POST">
             @csrf
-            <div class="mb-3">
-                <label class="form-label">Nome *</label>
-                <input type="text"
-                    class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror"
-                    name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
+                <div class="mb-3">
+                    <label class="form-label">Nome *</label>
+                    <input type="text"
+                        class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror"
+                        name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
+                </div>
 
                 <div class="mb-3">
                     <label class="form-label">Numero di telefono *</label>
@@ -45,9 +46,6 @@
                             name="address" value="{{ $errors->has('address') ? '' : old('address') }}">
                     </div>
 
-                    <div class="mb-3">
-                        <div class="mb-1">Tipologie di cucina *</div>
-                        @foreach ($types as $type)
                 <div class="mb-3">
                     <div class="mb-1">Tipologie di cucina</div>
                      @foreach ($types as $type)
@@ -62,7 +60,7 @@
                                 {{ $message }}
                             </div>
                         @enderror
-                    </div>
+                </div>
 
                     <button class="btn my-bg-green text-white" type="submit">Save</button>
                     <button class="btn btn-warning m-3">
