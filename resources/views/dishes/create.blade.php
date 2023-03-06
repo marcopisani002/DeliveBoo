@@ -33,10 +33,7 @@
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
-                    @elseif(old('name'))
-                    <div class="valid-feedback">
-                        Nice work dude!
-                    </div>
+                   
                     @enderror
 
                 </div>

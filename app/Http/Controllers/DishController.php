@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -17,16 +18,17 @@ class DishController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
         //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
         // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
-        $dishes = Dish::all();
-        $users = User::all();
-        $user_id = auth()->user()->id;
-        $userRestaurant = Dish::where('restaurant_id', $user_id)->get();
+        $dishes = Dish::where('restaurant_id', $user->id)->get();
+        
+      
+        $userRestaurant = Dish::where('restaurant_id', $user->id)->get();
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            'users' => $users,
+            'users' => $user,
         ]);
     }
 
