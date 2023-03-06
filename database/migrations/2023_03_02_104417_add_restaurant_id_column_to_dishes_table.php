@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('dishes', function (Blueprint $table) {
                //relazione One to Many con restaurant
                $table->unsignedBigInteger("restaurant_id")->nullable();
-               $table->foreign("restaurant_id")->references("id")->on("dishes");
+               $table->foreign("restaurant_id")->references("id")->on("restaurants");
         });
     }
 

@@ -17,10 +17,10 @@ class DishTableSeeder extends Seeder
     public function run(Faker $faker) {
         $restaurants = Restaurant::all();
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             $dish = Dish::create([
                 "name" => $faker->realText(),
-                "cover_img" => "/dish/hU8vhk51JTqbp0qcypiW6qnmXaw7InmzQLEtr8ho.jpg",
+                "cover_img" => "dish/AZoH8wSVB932nKO5iig7WujJYMchnCm5ft70bukz.jpg",
                 "ingredients" => $faker->realText(),
                 "description" => $faker->sentence(),
                 "price" => rand(5, 50),
