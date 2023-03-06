@@ -27,7 +27,8 @@
         {{-- INPUT NOME --}}
                 <div class="col-md-6">
                     <label for="text" class="form-label">Name</label>
-                    <input type="text" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
+                    <input type="text" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" 
+                    value="{{ old('name', $dish->name) }}">
 
                     {{-- Messaggio  --}}
                     @error('name')
@@ -58,7 +59,8 @@
         {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Description</label>
-                    <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror" placeholder="Description" name="description">{{ old('description') }}</textarea>
+                    <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror"
+                    placeholder="Description" name="description">{{ old('description', $dish->description) }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('description')
@@ -76,7 +78,8 @@
             {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Ingredients</label>
-                    <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Ingredients" name="ingredients">{{ old('ingredients') }}</textarea>
+                    <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror"
+                    placeholder="Ingredients" name="ingredients">{{ old('ingredients', $dish->ingredients) }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('ingredients')
@@ -94,7 +97,8 @@
         {{-- INPUT PRICE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Price</label>
-                    <input type="number" step=".01"  class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
+                    <input type="number" step=".01"  class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror"
+                    name="price" value="{{ old('price', $dish->price) }}" id="" placeholder="price">
 
                     {{-- Messaggio  --}}
                     @error('price')
