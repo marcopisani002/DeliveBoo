@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('dish_order', function (Blueprint $table) {
               //relazione Many to Many tra dishes e orders
-              $table->id();
-              $table->unsignedBigInteger("dish_id")->nullable();
-              $table->foreign("dish_id")->references("id")->on("dishes");
-  
+            $table->id();
+            $table->unsignedBigInteger("dish_id")->nullable();
+            $table->foreign("dish_id")->references("id")->on("dishes");
+
               //relazione Many to Many tra dishes e orders
-              $table->unsignedBigInteger("order_id")->nullable();
-              $table->foreign("order_id")->references("id")->on("orders");
+            $table->unsignedBigInteger("order_id")->nullable();
+            $table->foreign("order_id")->references("id")->on("orders");
         });
     }
 

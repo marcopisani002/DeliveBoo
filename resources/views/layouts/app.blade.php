@@ -52,7 +52,7 @@
                             <a class="nav-link" href="{{url('/restaurants') }}">{{ __('Restaurants') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{url('/dishes') }}">{{ __('Dishes') }}</a>
+                            <a class="nav-link" href="{{url('dishes') }}">{{ __('Dishes') }}</a>
                         </li>
                     </ul>
 
@@ -78,7 +78,7 @@
                                 <a class="dropdown-item" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
                                 <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 

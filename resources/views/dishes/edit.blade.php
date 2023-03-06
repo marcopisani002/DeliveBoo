@@ -20,8 +20,9 @@
         <div class="col-12 mt-5 justify-content-center">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{route('dishes.update') }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{ route('dishes.update', $dish->id) }} " class="row g-3" method="POST" enctype="multipart/form-data">
                 @csrf
+                @method(PUT)
 
         {{-- INPUT NOME --}}
                 <div class="col-md-6">
@@ -111,7 +112,7 @@
                 {{-- HIDE --}}
                 <div class="form-check form-switch">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
-                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    <input name="hide" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 </div>
 
 

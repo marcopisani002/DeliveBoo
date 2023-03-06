@@ -14,11 +14,9 @@ class Restaurant extends Model
         'cover_img',
         'vat',
         'address',
+        'type_id',
         'user_id',
-        'type_id'
-=======
-        'user_id',
->>>>>>> test
+
     ];
     use HasFactory;
 

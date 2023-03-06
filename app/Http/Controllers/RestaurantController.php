@@ -37,8 +37,8 @@ class RestaurantController extends Controller
         $types = Type::all();
 
         return view ('restaurants.create', [
-            'restaurants'=> $restaurants,
-            'types'=>$types,
+            'restaurants' => $restaurants,
+            'types' => $types,
             ]);
     }
 
@@ -54,11 +54,12 @@ class RestaurantController extends Controller
              // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
             "user_id" => Auth::id(),
         ]);
-
+        
         $types = Type::all();
         $path = Storage::put("restaurant", $data["cover_img"]);
-
+        
         $restaurant->fill($data);
+        $restaurant->cover_img = $path;
         $restaurant->save();
         
         if (key_exists('types', $data)){
@@ -82,7 +83,7 @@ class RestaurantController extends Controller
      */
     public function edit($id)
     {
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = Restaurant::findOrFail($id);
         $types = Type::all();
 
         return view('restaurants.edit',compact('restaurant','types'));
@@ -94,7 +95,7 @@ class RestaurantController extends Controller
     public function update(UpdateRestaurantRequest $request, $id)
     {
         $data = $request->validated();
-        $restaurant = restaurant::findOrFail($id);
+        $restaurant = Restaurant::findOrFail($id);
         $types = Type::all();
 
         
@@ -107,7 +108,13 @@ class RestaurantController extends Controller
             ...$data,
             "cover_img"=>$path ?? $restaurant->cover_img
         ]);
-        $restaurant->types()->sync($data["types"]);
+
+        if (key_exists('types', $data)){
+            $restaurant->types()->attach($data["types"]);
+        }
+        
+        $restaurant->types()->sync($data['types']);
+
 
         return redirect()->route('restaurants.show',compact('restaurant','types'));
     
@@ -116,7 +123,7 @@ class RestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restaurant $restaurant, $id)
+    public function destroy(Request $request, $id)
     {
         $restaurant = Restaurant::findOrFail($id);
 

@@ -46,7 +46,6 @@
                     <label for="" class="form-label">Cover Image</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
-                @dump('cover_img')
 
                     @error('cover_img')
                     <div class="invalid-feedback">

@@ -28,7 +28,7 @@ return new class extends Migration
      */
     public function down()
     {
-          Schema::dropIfExists('restaurant_type');
-      
+        Schema::dropIfExists('restaurant_type');
+    
     }
 };

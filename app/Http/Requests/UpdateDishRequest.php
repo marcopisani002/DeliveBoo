@@ -23,11 +23,11 @@ class UpdateDishRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255|string',
-            'cover_image' => 'required|file',
-            'ingredients' => 'required|text',
-            'description' =>  'required|max: 300',
-            'price' => 'required|decimal',
-            'hide' => 'required|boolean',
+            'cover_img' => 'required|image',
+            'ingredients' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|numeric',
+            'hide' => 'nullable|boolean',
         ];
     }
 }

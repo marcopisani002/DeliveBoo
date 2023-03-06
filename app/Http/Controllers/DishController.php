@@ -3,11 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dish;
-<<<<<<< HEAD
-=======
 use App\Models\User;
-use Illuminate\Http\Request;
->>>>>>> 16d55efe7fcfe3c62a7d15281fb662ed4222b092
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
@@ -26,10 +22,11 @@ class DishController extends Controller
         $dishes = Dish::all();
         $users = User::all();
         $user_id = auth()->user()->id;
-        $dishes = Dish::where('restaurant_id', $user_id)->get();
+        $userRestaurant = Dish::where('restaurant_id', $user_id)->get();
 
         return view('dishes.index', [
             'dishes' => $dishes,
+            'users' => $users,
         ]);
     }
 
@@ -59,13 +56,8 @@ class DishController extends Controller
         $dish->cover_img = $path;
         $dish->save();
 
-<<<<<<< HEAD
-
 
         return redirect()->route("dishes.show", compact('dish'));
-=======
-        return redirect()->route("dishes.show", compact('dishes'));
->>>>>>> 16d55efe7fcfe3c62a7d15281fb662ed4222b092
     }
 
     /**
@@ -83,12 +75,10 @@ class DishController extends Controller
      */
     public function edit($id)
     {
-        $dishes = Dish::find($id);
+        $dish = Dish::findOrFail($id);
 
 
-        return view('dishes.create', [
-            'dishes' => $dishes,
-        ]);
+        return view('dishes.create', compact('dish'));
     }
 
     /**
@@ -96,6 +86,13 @@ class DishController extends Controller
      */
     public function update(UpdateDishRequest $request, Dish $dish)
     {
+        $data = $request->validated();
+        $dish->update($data);
+
+        $path = Storage::put("dish", $data["cover_img"]);
+        
+        $dish->cover_img = $path;
+        $dish->save();
 
         return redirect()->route("dishes.show", $dish->id);
     }

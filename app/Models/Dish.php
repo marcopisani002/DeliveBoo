@@ -9,11 +9,12 @@ class Dish extends Model
 {
     protected $fillable = [
         'name', 
-        'cover_image',
+        'cover_img',
         'ingredients',
         'description',
         'price',
         'hide',
+        'user_id',
         'restaurant_id'
     ];
 

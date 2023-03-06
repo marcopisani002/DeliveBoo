@@ -1,15 +1,12 @@
 @extends('layouts.app');
 
+
 @section('content')
 
 <div class="container-fluid m5-auto mt-3">
   <h1 class="d-flex justify-content-between">
       Lista Ristoranti
 
-      <a href="{{ route('restaurants.create') }}" class="btn btn-primary">
-        <i class="fas fa-plus"></i>
-        Aggiungi
-      </a>
     </h1>
 
     <table class="table table-striped">
@@ -37,7 +34,7 @@
             <td>{{ $restaurant->address }}</td>
             <td>
               @foreach ($restaurant->types as $type)
-              {{ $type->name }}
+                {{ $type->name }}
               @endforeach
             </td>
             <td>
@@ -62,7 +59,13 @@
       </tbody>
     </table>  
 
-     {{-- {{ $restaurants->links() }} --}}
+          <a href="{{ route('restaurants.create') }}" class="btn btn-primary ">
+              <i class="fas fa-plus"></i>
+              Aggiungi
+          </a>
+
+
+    {{-- {{ $restaurants->links() }} --}}
 
   </div>
 @endsection

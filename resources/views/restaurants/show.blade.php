@@ -8,6 +8,10 @@
                 Back to Dashboard
             </a>
         </button>
+                    <a href="{{ route('restaurants.create') }}" class="btn btn-primary {{ $restaurant->id > 0 ? 'disabled' : ''}}">
+                        <i class="fas fa-plus"></i>
+                        Aggiungi
+                    </a>
     </div>
 
     <div class="row mx-5">
