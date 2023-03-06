@@ -11,8 +11,8 @@ class Order extends Model
         'customer_name',	
         'customer_surname',	
         'customer_address',	
-        'customer_phone','
-        total_amount',
+        'customer_phone',
+        'total_amount',
     ];
 
     use HasFactory;

@@ -1,1 +1,46 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+:root{
+    background: rgb(249,202,48);
+    background: linear-gradient(0deg, rgba(249,202,48,0.7357317927170868) 0%, rgba(239,61,23,0.7805497198879552) 100%);
+
+    // /* CSS HEX */
+    --india-green: #318411ff;
+    --golden-gate-bridge: #ef5117ff;
+    --sunglow: #f9ca30ff;
+    --light-golden-gate: #ef3d17;
+
+    $india-green: #318411ff;
+}
+
+.body-bg{
+    background: var(--background);
+    background: var(--background-gradient);
+}
+
+.bg-form{
+    background: rgba(255, 255, 255, 0.31);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.8px);
+    -webkit-backdrop-filter: blur(7.8px);
+}
+
+.navbar-orange{
+    background-color: var(--light-golden-gate);
+    color: white;
+}
+
+.my-bg-green{
+    background-color: var(--india-green);
+    border-color: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.img-card-container{
+    
+}

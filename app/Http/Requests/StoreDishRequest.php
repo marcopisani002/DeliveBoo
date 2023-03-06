@@ -26,7 +26,7 @@ class StoreDishRequest extends FormRequest
             'cover_img' => 'required|image',
             'ingredients' => 'required|string',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|string',
             'hide' => 'nullable|boolean',
         ];
     }

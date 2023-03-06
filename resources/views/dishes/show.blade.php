@@ -12,7 +12,7 @@
 
     <div class="row mx-5">
                 <div class="col-6 my-3">
-                    <div class="card">
+                    <div class="card bg-form">
                         <img src="{{ asset('storage/' . $dish['cover_img']) }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{$dish->name}}</h5>

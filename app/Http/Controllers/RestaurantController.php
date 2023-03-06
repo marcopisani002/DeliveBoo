@@ -24,8 +24,9 @@ class RestaurantController extends Controller
         $types = Type::all();
         $users = User::all();
         $dishes = Dish::all();
-    
-        return view("restaurants.index", compact('users', 'dishes','restaurants','types'));
+        
+
+        return view ('restaurants.index', compact('users', 'dishes','restaurants','types'));
     }
 
     /**
@@ -35,11 +36,11 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::all();
         $types = Type::all();
+        $users = User::all();
+        $dishes = Dish::all();
+        
 
-        return view ('restaurants.create', [
-            'restaurants'=> $restaurants,
-            'types'=>$types,
-            ]);
+        return view ('restaurants.create', compact('users', 'dishes','restaurants','types'));
     }
 
     /**
@@ -54,11 +55,12 @@ class RestaurantController extends Controller
              // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
             "user_id" => Auth::id(),
         ]);
-
+        
         $types = Type::all();
         $path = Storage::put("restaurant", $data["cover_img"]);
-
+        
         $restaurant->fill($data);
+        $restaurant->cover_img = $path;
         $restaurant->save();
         
         if (key_exists('types', $data)){
@@ -80,53 +82,24 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit()
     {
-        $restaurant = restaurant::findOrFail($id);
-        $types = Type::all();
-
-        return view('restaurants.edit',compact('restaurant','types'));
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRestaurantRequest $request, $id)
+    public function update()
     {
-        $data = $request->validated();
-        $restaurant = restaurant::findOrFail($id);
-        $types = Type::all();
-
-        
-        if (key_exists("cover_img", $data)){   
-            $path = Storage::put("restaurants", $data["cover_img"]);
-            Storage::delete($restaurant->cover_img);
-        }
-
-        $restaurant->update([
-            ...$data,
-            "cover_img"=>$path ?? $restaurant->cover_img
-        ]);
-        $restaurant->types()->sync($data["types"]);
-
-        return redirect()->route('restaurants.show',compact('restaurant','types'));
-    
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restaurant $restaurant, $id)
+    public function destroy()
     {
-        $restaurant = Restaurant::findOrFail($id);
-
-        if ($restaurant->cover_img) {
-            Storage::delete($restaurant->cover_img);
-        }
-
-        $restaurant->types()->detach();
-        $restaurant->delete();
-
-        return redirect()->route("restaurants.index", $restaurant->id);
+        //
     }
 }

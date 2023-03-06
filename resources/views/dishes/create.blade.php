@@ -17,7 +17,7 @@
 
 
     <div class="row">
-        <div class="col-12 mt-5 justify-content-center">
+        <div class="col-12 mt-5 justify-content-center bg-form">
 
         {{-- INIZIO FORM --}}
             <form action=" {{route('dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
@@ -46,7 +46,6 @@
                     <label for="" class="form-label">Cover Image</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
-                @dump('cover_img')
 
                     @error('cover_img')
                     <div class="invalid-feedback">
@@ -122,9 +121,9 @@
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
 
-                    <button class="btn btn-warning m-3">
-                        <a href="{{route('dashboard')}}" class="text-decoration-none text-white">
-                            Back to Dashboard
+                    <button class="btn bg-none m-3">
+                        <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
+                            Back 
                         </a>
                     </button>
                 </div>
