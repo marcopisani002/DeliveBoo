@@ -20,13 +20,14 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        $restaurants = Restaurant::all();
+        //$restaurants = Restaurant::all();
         $types = Type::all();
-        $users = User::all();
+        $user = Auth::user();
+        $restaurants = Restaurant::where('user_id', $user->id)->get();
         $dishes = Dish::all();
         
 
-        return view ('restaurants.index', compact('users', 'dishes','restaurants','types'));
+        return view ('restaurants.index', compact('user', 'dishes','restaurants','types'));
     }
 
     /**
@@ -36,24 +37,24 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::all();
         $types = Type::all();
-        $users = User::all();
+        $user = Auth::user();
         $dishes = Dish::all();
         
 
-        return view ('restaurants.create', compact('users', 'dishes','restaurants','types'));
+        return view ('restaurants.create', compact('user', 'dishes','restaurants','types'));
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(StoreRestaurantRequest $request)
-    {
+    {$user = Auth::user();
         $data = $request->validated();
         $restaurant = Restaurant::create([
             ...$data,
             "cover_img" => $path ?? '',
              // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
-            "user_id" => Auth::id(),
+            "user_id" => $user->id,
         ]);
         
         $types = Type::all();
