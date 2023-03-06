@@ -33,18 +33,15 @@
 
 
 
-                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modify</a></button>
+                            <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
 
-                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
-                                @csrf()
-                                @method('delete')
+                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button class=" btn btn-danger mt-3 text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo piatto?')">Elimina</button>
+                              </form>
 
-                                <button class="btn btn-danger my-3">
-                                    <i class="fas fa-trash w-3">Delete</i>
-                                </button>
-                            </form>
-
-                            <script>
+                            {{-- <script>
                                 const form = document.getElementById("form-delete");
                                 form.addEventListener("submit", function(e) {
                                 e.preventDefault();
@@ -54,7 +51,7 @@
                                 }
                                 })
 
-                            </script>
+                            </script> --}}
                         </div>
                     </div>
                 </div>
