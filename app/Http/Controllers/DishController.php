@@ -56,7 +56,7 @@ class DishController extends Controller
         $dish->cover_img = $path;
         $dish->save();
 
-<<<<<<< HEAD
+
 
 
         return redirect()->route("dishes.show", compact('dish'));
