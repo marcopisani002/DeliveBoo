@@ -20,6 +20,7 @@ return new class extends Migration
               //relazione Many to Many tra dishes e orders
             $table->unsignedBigInteger("order_id")->nullable();
             $table->foreign("order_id")->references("id")->on("orders");
+            $table->timestamps();
         });
     }
 
