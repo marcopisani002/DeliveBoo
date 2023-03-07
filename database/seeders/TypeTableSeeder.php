@@ -13,7 +13,7 @@ class TypeTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $types = ["italiano", "cinese", "giapponese", "messicano", "indiano", "fast-food"];
+        $types = ["Italiano", "Cinese", "Giapponese", "Messicano", "Indiano", "Fast-food"];
 
         foreach ($types as $Type) {
             DB::table('types')->insert([
