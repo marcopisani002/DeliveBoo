@@ -20,7 +20,7 @@ class DishTableSeeder extends Seeder
         for ($i = 0; $i < 15; $i++) {
             $dish = Dish::create([
                 "name" => $faker->realText(),
-                "cover_img" => "/dish/73rGU7hiLUjifUhDhAfAt1DRsXX3GPyN6gvoh8Om.jpg",
+                "cover_img" => "/dish/0bp4p7NF4QKZ1jP2OIRm3XdHdea1MQgsIJYdjten.png",
                 "ingredients" => $faker->realText(),
                 "description" => $faker->sentence(),
                 "price" => rand(5, 50),
