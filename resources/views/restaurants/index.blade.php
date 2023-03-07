@@ -2,13 +2,13 @@
 
 @section('content')
     <main class="container-fluid">
-        @foreach ($restaurants as $restaurant)
         <div class="container-fluid text-start">
             <button class="btn btn-warning m-3">
                 <a href="{{ route('dashboard') }}" class="text-decoration-none text-white">
                     Back to Dashboard
                 </a>
             </button>
+        @foreach ($restaurants as $restaurant)
             <button class="btn btn-primary my-bg-green border-0 {{ $restaurant->id >= 1 ? 'd-none' : '' }} ">
                 <a href="{{ route('restaurants.create') }}"
                     class="text-decoration-none text-white">
@@ -33,11 +33,9 @@
                                     <span class="badge rounded-pill text-bg-success">{{ $type->name }}</span>
                                 @endforeach
                             </p>
-
                         </div>
                     </div>
                 </div>
-
             @endforeach    
                 {{--<div class="row">
                     <div class="col-12 m-3">
