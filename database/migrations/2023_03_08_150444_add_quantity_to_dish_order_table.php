@@ -11,18 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('surname')->after('name');
+        Schema::table('dish_order', function (Blueprint $table) {
+            $table->bigInteger('quantity')->after('order_id');
         });
     }
+
 
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('surname');
+        Schema::table('dish_order', function (Blueprint $table) {
+            $table->dropColumn('quantity');
         });
     }
 };
