@@ -70,9 +70,9 @@ class DishController extends Controller
         $dish->restaurant_id = $user->id;
         $dish->save();
     
-        return redirect()->route('dishes.index');
+        // return redirect()->route('dishes.index');
 
-       // return redirect()->route("dishes.show", compact('dish'));
+       return redirect()->route("dishes.show", compact('dish'));
     }
 
     /**

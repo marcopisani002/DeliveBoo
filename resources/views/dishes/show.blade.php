@@ -12,13 +12,16 @@
 
     <div class="row mx-5">
                 <div class="col-6 my-3">
-                    <div class="card bg-form">
-                        <img src="{{ asset('storage/' . $dish['cover_img']) }}" class="card-img-top" alt="...">
+                    <div class="bg-form">
+                        <div class="card h-100 bg-form">
+                        <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top h-50" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{$dish->name}}</h5>
-                            <p class="card-text">{{$dish->description}}</p>
-                            <p class="card-text">{{ $dish->ingredients }}</p>
-                            <p class="btn btn-primary">{{$dish->price}}</p>
+                            <h5 class="card-title"><b>ID: </b>{{$dish->id}}</h5>
+                            <h5 class="card-title"><b>Nome: </b>{{$dish->name}}</h5>
+                            <p class="card-text"><b>Descrizione: </b>{{$dish->description}}</p>
+                            <p class="card-text"><b>Ingredienti: </b>{{$dish->ingredients}}</p>
+                            <p class="card-text"><b>Prezzo: </b>€{{$dish->price}}</p>
+                            <p><b>Hide: </b>{{$dish->hide == true ? 'on' : 'off'}}</p>
                             
                             <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
                             <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
