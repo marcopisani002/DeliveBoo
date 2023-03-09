@@ -5,7 +5,7 @@
     <div class="container-fluid text-start">
         <button class="btn bg-warning m-3">
             <a href="{{route('dashboard')}}" class="text-decoration-none text-white">
-                Back
+                Back to Dashboard
             </a>
         </button>
     </div>

@@ -21,10 +21,13 @@
                     Azioni
                 </button>
                 <ul class="dropdown-menu bg-light ">
-                    <li><a class="dropdown-item text-center" href="{{ route('restaurants.create') }}">Aggiungi Il Tuo Ristorante</a>
-                       
+                    @if ($restaurants->count() <= 0)
+                    <li>
+                        <a class="dropdown-item text-center " href="{{ route('restaurants.create') }}">Aggiungi Il Tuo Ristorante</a>
                     </li>
                     <hr>
+                    @endif
+
                     <li><a class="dropdown-item text-center" href="{{ route('restaurants.index') }}">Il Tuo Ristorante</a>
                     <hr>
                     <a class="dropdown-item text-center" href="{{ route('dishes.index') }}">I Tuoi Piatti</a></li>
@@ -66,9 +69,8 @@
                                     <td> {{ Auth::user()->name }}</td>
                                     <td> {{ Auth::user()->surname }}</td>
                                     <td> {{ Auth::user()->email }}</td>
+                                </tr>
                                  
-
-
                             </tbody>
                         </table>
                     </div>

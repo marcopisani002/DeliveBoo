@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container bg-form p-4 m-5">
+    <div class="container bg-form p-4 my-5 mx-auto">
         <form class="text-white " enctype="multipart/form-data" action="{{ route('restaurants.store') }}" method="POST">
             @csrf
                 <div class="mb-3">

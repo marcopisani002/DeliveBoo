@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Type;
 use App\Models\Dish;
 use App\Models\User;
@@ -12,12 +13,12 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index(){
-        $restaurant = Restaurant::all();
-        $restaurant_id = [Restaurant::pluck('id')];
-
+        
         $types = Type::all();
-        $users = User::all();
+        $user = Auth::user();
         $dishes = Dish::all();
+        $restaurants = Restaurant::where('user_id', $user->id)->get();
+        $restaurant_id = [Restaurant::pluck('id')];
 
         // if(key_exists('id', $restaurant_id)){
         //     return view('restaurants.show');
@@ -26,11 +27,12 @@ class DashboardController extends Controller
         // }
 
         return view('dashboard', [
-            'restaurant' => $restaurant,
+            'restaurants' => $restaurants,
             'restaurant_id' => $restaurant_id,
             'types' => $types,
-            'users' => $users,
+            'user' => $user,
             'dishes' => $dishes,
         ]);
+        // ->with('restaurant', $restaurant);
     }
 }

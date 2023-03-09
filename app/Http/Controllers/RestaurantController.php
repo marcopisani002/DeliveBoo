@@ -20,14 +20,13 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //$restaurants = Restaurant::all();
+        // $restaurants = Restaurant::all();
         $types = Type::all();
         $user = Auth::user();
-        $restaurants = Restaurant::where('user_id', $user->id)->get();
         $dishes = Dish::all();
+        $restaurants = Restaurant::where('user_id', $user->id)->get();
         
-
-        return view ('restaurants.index', compact('user', 'dishes','restaurants','types'));
+        return view ('restaurants.index', compact('restaurants','user', 'dishes','types'));
     }
 
     /**
