@@ -20,23 +20,12 @@
                     aria-expanded="false">
                     Azioni
                 </button>
-                <ul class="dropdown-menu bg-light ">
-                    @if ($restaurants->count() <= 0)
-                    <li>
-                        <a class="dropdown-item text-center " href="{{ route('restaurants.create') }}">Aggiungi Il Tuo Ristorante</a>
-                    </li>
-                    <hr>
-                    @endif
-
-                    <li><a class="dropdown-item text-center" href="{{ route('restaurants.index') }}">Il Tuo Ristorante</a>
-                    <hr>
-                    <a class="dropdown-item text-center" href="{{ route('dishes.index') }}">I Tuoi Piatti</a></li>
-                    <hr>
-                    <li><a class="dropdown-item text-center" href="{{ route('dishes.create') }}">Aggiungi un Piatto </a>
-                    </li>
-
-
-                </ul>
+                <div class="dropdown-menu bg-success">
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('restaurants.create') }}">Aggiungi Il Tuo Ristorante</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('restaurants.index') }}">Il Tuo Ristorante</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.index') }}">I Tuoi Piatti</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.create') }}">Aggiungi un Piatto </a>
+                </div>
             </div>
 
         </div>

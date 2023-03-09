@@ -41,6 +41,17 @@ img{
     width: 100%;
 }
 
-.img-card-container{
+#style-links {
+    color: white;
+    text-decoration: none;
     
+    // Stile per il link attivo
+    &:active {
+        background-color: rgb(7, 77, 45);
+    }
+    
+    // Stile per il link durante il passaggio del mouse sopra di esso
+    &:hover {
+        color: rgb(53, 179, 120);
+    }
 }
