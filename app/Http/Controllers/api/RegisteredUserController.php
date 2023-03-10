@@ -28,7 +28,7 @@ class UserRegistrationController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -48,7 +48,7 @@ class UserRegistrationController extends Controller
 
         Auth::login($newUser);
 
-        return response()->json($newUser);
+        return redirect(RouteServiceProvider::HOME)->response()->json($newUser);
 
         
     }
