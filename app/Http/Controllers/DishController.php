@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dish;
 use App\Models\User;
+use App\Models\Restaurant;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
@@ -22,14 +23,9 @@ class DishController extends Controller
         //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
         // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
         $dishes = Dish::where('restaurant_id', $user->id)->get();
-        
-      
-        $userRestaurant = Dish::where('restaurant_id', $user->id)->get();
+        $restaurants = Restaurant::where('user_id', $user->id)->get();
 
-        return view('dishes.index', [
-            'dishes' => $dishes,
-            
-        ]);
+        return view('dishes.index', compact('restaurants','dishes'));
     }
 
     /**
@@ -54,12 +50,8 @@ class DishController extends Controller
 
          $path = Storage::put("dish", $data["cover_img"]);
         
-
          $dish->fill($data);
-        //$dish->cover_img = $path;
-        // $dish->save();
-
-
+        
         $user = Auth::user();
         $dish = new Dish;
         $dish->cover_img = $path;
@@ -70,8 +62,6 @@ class DishController extends Controller
         $dish->restaurant_id = $user->id;
         $dish->save();
     
-        // return redirect()->route('dishes.index');
-
        return redirect()->route("dishes.show", compact('dish'));
     }
 
@@ -81,7 +71,11 @@ class DishController extends Controller
     public function show($id)
     {
         $dish = Dish::findOrFail($id);
+        $restaurant_id = Auth::user()->restaurant->id;
 
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort(403);
+        }
         return view('dishes.show', compact('dish'));
     }
 
@@ -91,8 +85,12 @@ class DishController extends Controller
     public function edit($id)
     {
         $dish = Dish::findOrFail($id);
+        $restaurant_id = Auth::user()->restaurant->id;
 
-
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort(403);
+        }
+        
         return view('dishes.edit', compact('dish'));
     }
 

@@ -28,7 +28,7 @@ class StoreRestaurantRequest extends FormRequest
             'vat' => 'required|numeric|digits:11',
             'address' => 'required|string',
             'user_id'=>'nullable',
-            'types' => 'nullable|array|exists:types,id'
+            'types' => 'required|array|exists:types,id'
         ];
     }
 }

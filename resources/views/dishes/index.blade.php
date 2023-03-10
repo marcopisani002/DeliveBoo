@@ -10,12 +10,13 @@
                     Back to Dashboard
                 </a>
             </button>
-
-            <button class="btn btn-info text-center"> 
-            <a href="{{route('dishes.create')}}" class="text-decoration-none">
-                Add a dish to your menu
-            </a>
-            </button>
+            @if ($restaurants->count() > 0)
+                <button class="btn btn-info text-center"> 
+                <a href="{{route('dishes.create')}}" class="text-decoration-none">
+                    Add a dish to your menu
+                </a>
+                </button>
+            @endif
         </div>
 
         <div class="row mx-5">
