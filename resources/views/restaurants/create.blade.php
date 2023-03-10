@@ -18,7 +18,7 @@
                         name="phone_number" value="{{ $errors->has('phone_number') ? '' : old('phone_number') }}">
 
                     <div class="mb-3">
-                        <label for="" class="form-label">Cover Image *</label>
+                        <label class="form-label">Cover Image *</label>
                         <input type="file"
                             class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror"
                             name="cover_img">
