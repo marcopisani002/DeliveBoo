@@ -3,6 +3,7 @@
 
 use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\RegisteredUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -29,4 +30,4 @@ Route::post("/dish-check", [DishController::class, "store"]);
 // sarà raggiungibile tramite /api/posts/4
 Route::get("/restaurants/{restaurant}", [RestaurantController::class, "show"]);
 
-Route::post("/user-registration", [UserRegistrationController::class, "store"]);
+Route::post("/user-registration", [RegisteredUserController::class, "store"]);
