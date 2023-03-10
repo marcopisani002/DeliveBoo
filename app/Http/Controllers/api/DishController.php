@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Dish;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
 {
@@ -28,7 +30,22 @@ class DishController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|max:255|string',
+            'cover_img' => 'required|image',
+            'ingredients' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
+            'hide' => 'nullable|boolean',
+        ]);
+
+        if($request->has("cover_img")){
+            $data["cover_img"] = Storage::put("/dish-check", $data["cover_img"]);
+        }
+
+        $newDish = Dish::create($data);
+
+        return response()->json($newDish);
     }
 
     /**

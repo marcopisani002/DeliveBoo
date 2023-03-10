@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\api;
+namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class RestaurantController extends Controller
 {
@@ -31,7 +32,21 @@ class RestaurantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'phone_number' => 'required|digits:10',
+            'cover_img' => 'required|image',
+            'vat' => 'required|numeric|digits:11',
+            'address' => 'required|string',
+        ]);
+
+        if($request->has("cover_img")){
+            $data["cover_img"] = Storage::put("/restaurant-check", $data["cover_img"]);
+        }
+
+        $newRestaurant = Restaurant::create($data);
+
+        return response()->json($newRestaurant);
     }
 
     /**
