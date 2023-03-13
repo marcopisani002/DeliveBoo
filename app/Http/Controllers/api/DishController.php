@@ -14,7 +14,8 @@ class DishController extends Controller
      */
     public function index()
     {
-        //
+        $dishes = Dish::all();
+        return response()->json($dishes);
     }
 
     /**
@@ -46,6 +47,7 @@ class DishController extends Controller
         $newDish = Dish::create($data);
 
         return response()->json($newDish);
+        return redirect()->action('DishController@index');
     }
 
     /**
@@ -53,7 +55,9 @@ class DishController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $dish = Dish::find('id');
+
+        return response()->json($dish->$id);
     }
 
     /**
@@ -69,7 +73,23 @@ class DishController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $data = $request->validate([
+            'name' => 'required|max:255|string',
+            'cover_img' => 'required|image',
+            'ingredients' => 'required|string',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
+            'hide' => 'nullable|boolean',
+        ]);
+
+        if($request->has("cover_img")){
+            $data["cover_img"] = Storage::put("/dishes", $data["cover_img"]);
+        }
+
+        $newDish = Dish::create()->update($data);
+
+        return response()->json($newDish);
+        return redirect()->action('DishController@index');
     }
 
     /**
@@ -77,6 +97,14 @@ class DishController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $dish = Dish::findOrFail($id);
+
+        if ($dish->cover_img) {
+            Storage::delete($dish->cover_img);
+        }
+
+        $dish->delete();
+
+        return response()->json($dish);
     }
 }

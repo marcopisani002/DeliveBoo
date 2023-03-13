@@ -28,7 +28,7 @@ class DishController extends Controller
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            
+            'userRestaurant' => $userRestaurant,
         ]);
     }
 
