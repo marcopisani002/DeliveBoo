@@ -107,9 +107,9 @@
 
                 {{-- HIDE --}}
                 <div class="form-check form-switch">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Hide</label>
-                    <input value="1" class="form-check-input" type="checkbox" name="hide" role="switch" id="flexSwitchCheckDefault"
-                    {{ ( 'hide' == 1) ? 'checked' : '' }}>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
+                    <input value="" class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault"
+                    {{ ( 'show' == 1) ? 'checked' : '' }}>
                 </div>
 
 

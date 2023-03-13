@@ -64,6 +64,7 @@ class DishController extends Controller
         $dish->description = $request->description;
         $dish->ingredients = $request->ingredients;
         $dish->price = $request->price;
+        $dish->show = $request->show;
         $dish->restaurant_id = $user->id;
         $dish->save();
     
@@ -107,9 +108,11 @@ class DishController extends Controller
         $data = $request->validated();
         $dish->update($data);
 
-        $path = Storage::put("dish", $data["cover_img"]);
+        if (isset($data->cover_img)) {
+            $path = Storage::put("dish", $data["cover_img"]);
+            $dish->cover_img = $path;
+        }
         
-        $dish->cover_img = $path;
         $dish->save();
 
         return redirect()->route("dishes.show", $dish->id);
