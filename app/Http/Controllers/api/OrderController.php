@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
+use App\Http\Controllers\Controller;
 
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
@@ -12,7 +14,9 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::all();
+        $users = User::find('id');
+        return response()->json($orders, $users);
     }
 
     /**
@@ -28,7 +32,17 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'customer_name',	
+            'customer_surname',	
+            'customer_address',	
+            'customer_phone',
+            'total_amount',
+        ]);
+
+        $newData = Order::create($data);
+
+        return response()->json($newData);
     }
 
     /**

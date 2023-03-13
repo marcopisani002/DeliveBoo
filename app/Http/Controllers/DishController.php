@@ -23,9 +23,14 @@ class DishController extends Controller
         //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
         // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
         $dishes = Dish::where('restaurant_id', $user->id)->get();
-        $restaurants = Restaurant::where('user_id', $user->id)->get();
+        
+      
+        $userRestaurant = Dish::where('restaurant_id', $user->id)->get();
 
-        return view('dishes.index', compact('restaurants','dishes'));
+        return view('dishes.index', [
+            'dishes' => $dishes,
+            'userRestaurant' => $userRestaurant,
+        ]);
     }
 
     /**
