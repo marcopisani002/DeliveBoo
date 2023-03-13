@@ -10,7 +10,7 @@ use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Validation\Rules\Exists;
 
 class DishController extends Controller
 {
@@ -51,24 +51,28 @@ class DishController extends Controller
     public function store(StoreDishRequest $request, Dish $dish)
     {
         // $user = Auth::user();
-         $data = $request->validated();
+        $data = $request->validated();
+        $path = Storage::put("dish", $data["cover_img"]);
+        $dish->fill($data);
 
-         $path = Storage::put("dish", $data["cover_img"]);
-        
-         $dish->fill($data);
-        
         $user = Auth::user();
-        $dish = new Dish;
-        $dish->cover_img = $path;
-        $dish->name = $request->name;
-        $dish->description = $request->description;
-        $dish->ingredients = $request->ingredients;
-        $dish->price = $request->price;
-        $dish->show = $request->show;
-        $dish->restaurant_id = $user->id;
-        $dish->save();
-    
-       return redirect()->route("dishes.show", compact('dish'));
+        if (!isset($data["show"])) {
+            $data['show']=0;
+        }
+        $data["cover_img"] = $path;
+        $data["restaurant_id"] = $user->id;
+        
+        $dish = Dish::create($data);
+        // $dish = new Dish;
+        // $dish->cover_img = $path;
+        // $dish->name = $request->name;
+        // $dish->description = $request->description;
+        // $dish->ingredients = $request->ingredients;
+        // $dish->price = $request->price;
+        // $dish->show = $request->show;
+        // $dish->save();
+        
+        return redirect()->route("dishes.show", compact('dish'));
     }
 
     /**
@@ -106,14 +110,18 @@ class DishController extends Controller
     public function update(UpdateDishRequest $request, Dish $dish)
     {
         $data = $request->validated();
-        $dish->update($data);
-
+        if (!($dish->show)) {
+            $dish->show == 0;
+            // dd($dish, $data);
+        }
+        
         if (isset($data->cover_img)) {
             $path = Storage::put("dish", $data["cover_img"]);
             $dish->cover_img = $path;
         }
-        
-        $dish->save();
+        $dish->update($data);
+        // $dish->save();
+        // dd($dish, $data);
 
         return redirect()->route("dishes.show", $dish->id);
     }

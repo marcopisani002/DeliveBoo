@@ -26,8 +26,8 @@ class UpdateDishRequest extends FormRequest
             'cover_img' => 'nullable|image',
             'ingredients' => 'required|string',
             'description' => 'required|string',
-            'price' => 'required|numeric',
-            'hide' => 'nullable|boolean',
+            'price' => 'required|numeric|min:0',
+            'show' => 'required|boolean',
         ];
     }
 }
