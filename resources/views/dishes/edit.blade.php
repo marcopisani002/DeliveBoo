@@ -111,12 +111,11 @@
                     </div>
                     @enderror
                 </div>
-                
 
             <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
-                <input class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault" 
-                {{ ( 'show' == 1) ? 'checked' : '' }}>
+                <input onclick="checkboxClicked()" value='{{$dish->show}}' class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault" 
+                {{ ( $dish->show == 2) ? 'checked' : '' }}>
             </div>
 
 
@@ -135,10 +134,21 @@
                     </button>
                 </div>
 
-
             </form>
         </div>
     </div>
 
 </main>
+
+<script>
+    function checkboxClicked() {
+  let checkBox = document.getElementById("flexSwitchCheckDefault");
+  if (checkBox.checked == true){
+    checkBox.value = 1; // Imposta il valore a true
+  } else {
+    checkBox.value = 0; // Imposta il valore a false
+  }
+}
+</script>
+
 @endsection

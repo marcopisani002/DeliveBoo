@@ -13,7 +13,7 @@ class Dish extends Model
         'ingredients',
         'description',
         'price',
-        'hide',
+        'show',
         'user_id',
         'restaurant_id'
     ];
