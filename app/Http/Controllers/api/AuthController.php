@@ -8,38 +8,38 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 
-class AuthController extends Controller
-{
-    //registering a new user
-    public function register(Request $request){
-        $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|string|unique:users,email',
-            'password' => 'required|string|confirmed',
-        ]);
+// class AuthController extends Controller
+// {
+//     //registering a new user
+//     public function register(Request $request){
+//         $data = $request->validate([
+//             'name' => 'required|string',
+//             'email' => 'required|string|unique:users,email',
+//             'password' => 'required|string|confirmed',
+//         ]);
 
-        $user = User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+//         $user = User::create([
+//             'name' => $data['name'],
+//             'email' => $data['email'],
+//             'password' => bcrypt($data['password']),
+//         ]);
 
-        $token = $user->createToken('generateToken')->plainTextToken;
+//         $token = $user->createToken('generateToken')->plainTextToken;
 
-        $dataToken = [
-            'user' => $user,
-            'token' => $token,
-        ];
+//         $dataToken = [
+//             'user' => $user,
+//             'token' => $token,
+//         ];
 
-        return response("register", $dataToken);
-    }
+//         return response("register", $dataToken);
+//     }
 
-    //log out user
-    public function logoutUser(){
-        auth()->user()->tokens()->delete();
+//     //log out user
+//     public function logoutUser(){
+//         auth()->user()->tokens()->delete();
 
-        return [
-            'message' => 'Logout Done with Success',
-        ];
-    }
-}
+//         return [
+//             'message' => 'Logout Done with Success',
+//         ];
+//     }
+// }

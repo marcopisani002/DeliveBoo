@@ -55,3 +55,51 @@ img{
         color: rgb(53, 179, 120);
     }
 }
+
+.form-control.success{
+    input{
+        border-color: green;
+    }
+}
+
+input{
+    .form-control.error{
+        border-color: red;
+    }
+}
+
+i{
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.form-control{
+    small{
+        visibility: visible;
+    }
+}
+
+.form-control.error{
+    small{
+        visibility: hidden;
+        color: red;
+        position: absolute;
+        left: 0;
+    }
+}
+
+.form-control.success{
+    .fa-check-circle{
+        color: green;
+        visibility: visible;
+    }
+}
+
+.form-control.error{
+    i.fa-exlamation-circle{
+        color: #ef3d17;
+        visibility: visible;
+    }
+}
