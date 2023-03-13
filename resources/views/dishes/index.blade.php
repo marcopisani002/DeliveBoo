@@ -10,7 +10,7 @@
                     Back to Dashboard
                 </a>
             </button>
-            @if ($restaurants->count() > 0)
+            @if ($userRestaurant->count() > 0)
                 <button class="btn btn-info text-center"> 
                 <a href="{{route('dishes.create')}}" class="text-decoration-none">
                     Add a dish to your menu
@@ -30,9 +30,11 @@
                             <p class="card-text"><b>Descrizione: </b>{{$dish->description}}</p>
                             <p class="card-text"><b>Ingredienti: </b>{{$dish->ingredients}}</p>
                             <p class="card-text"><b>Prezzo: </b>€{{$dish->price}}</p>
-                            <p><b>Hide: </b>{{$dish->hide == true ? 'on' : 'off'}}</p>
+                            <p><b>Mostra: </b>{{$dish->hide == true ? 'on' : 'off'}}</p>
+                            <div class="form-check form-switch">
 
-
+                                <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                            </div>
 
                             <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
 
