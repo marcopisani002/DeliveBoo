@@ -21,7 +21,7 @@
                             <p class="card-text"><b>Descrizione: </b>{{ $dish->description }}</p>
                             <p class="card-text"><b>Ingredienti: </b>{{ $dish->ingredients }}</p>
                             <p class="card-text"><b>Prezzo: </b>€{{ $dish->price }}</p>
-                            <p><b>Hide: </b>{{ $dish->hide == true ? 'on' : 'off' }}</p>
+                            <p><b>Show: </b>{{ $dish->show == true ? 'on' : 'off' }}</p>
 
                             <button class="btn btn-info"> <a href="{{ route('dishes.edit', $dish->id) }}"
                                     class="text-decoration-none">Modifica</a></button>
