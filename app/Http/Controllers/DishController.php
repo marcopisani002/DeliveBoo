@@ -10,7 +10,7 @@ use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Validation\Rules\Exists;
 
 class DishController extends Controller
 {
@@ -20,16 +20,13 @@ class DishController extends Controller
     public function index()
     {
         $user = Auth::user();
-        //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
-        // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
         $dishes = Dish::where('restaurant_id', $user->id)->get();
         
-      
-        $userRestaurant = Dish::where('restaurant_id', $user->id)->get();
+        // $userRestaurant = Restaurant::where('user_id', $user->id)->get();
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            'userRestaurant' => $userRestaurant,
+            // 'userRestaurant' => $userRestaurant,
         ]);
     }
 
@@ -51,24 +48,28 @@ class DishController extends Controller
     public function store(StoreDishRequest $request, Dish $dish)
     {
         // $user = Auth::user();
-         $data = $request->validated();
+        $data = $request->validated();
+        $path = Storage::put("dish", $data["cover_img"]);
+        $dish->fill($data);
 
-         $path = Storage::put("dish", $data["cover_img"]);
-        
-         $dish->fill($data);
-        
         $user = Auth::user();
+        if (!isset($data["show"])) {
+            $data['show']=0;
+        }
+        // $data["cover_img"] = $path;
+        // $data["restaurant_id"] = $user->id;
+        
         $dish = new Dish;
         $dish->cover_img = $path;
-        $dish->name = $request->name;
-        $dish->description = $request->description;
-        $dish->ingredients = $request->ingredients;
-        $dish->price = $request->price;
-        $dish->show = $request->show;
-        $dish->restaurant_id = $user->id;
+        $dish->name = $data['name'];
+        $dish->description = $data['description'];
+        $dish->ingredients = $data['ingredients'];
+        $dish->price = $data['price'];
+        $dish->show = $data['show'];
+        $dish["restaurant_id"] = $user->id;
         $dish->save();
-    
-       return redirect()->route("dishes.show", compact('dish'));
+        
+        return redirect()->route("dishes.show", compact('dish'));
     }
 
     /**
@@ -106,14 +107,17 @@ class DishController extends Controller
     public function update(UpdateDishRequest $request, Dish $dish)
     {
         $data = $request->validated();
-        $dish->update($data);
-
+        if (!isset($data["show"])) {
+            $dish['show']=0;
+        }
+        
         if (isset($data->cover_img)) {
             $path = Storage::put("dish", $data["cover_img"]);
             $dish->cover_img = $path;
         }
-        
-        $dish->save();
+        $dish->update($data);
+        // $dish->save();
+        // dd($dish, $data);
 
         return redirect()->route("dishes.show", $dish->id);
     }

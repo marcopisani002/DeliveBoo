@@ -27,7 +27,20 @@ class StoreDishRequest extends FormRequest
             'ingredients' => 'required|string',
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
-            'hide' => 'nullable|boolean',
+            'show' => 'nullable|boolean',
+        ];
+    }
+
+    public function messages() {
+        return [
+            "name.required" => "Il titolo è obbligatorio",
+            "name.max" =>  "Il titolo deve avere massimo :max caratteri",
+            "cover_img.required" => "Il piatto deve avere un immagine di copertina",
+            "cover_img.image" => "L'immagine di copertina deve essere un'immagine",
+            "ingredients.required" => "Gli ingredienti sono obbligatori",
+            "description.required" => "Inserire una descrizione",
+            "price.required" => "Il prezzo da inserire è obbligatorio",
+            "price.min" => "Il prezzo deve essere maggiore di :min ",
         ];
     }
 }

@@ -90,7 +90,7 @@
         {{-- INPUT PRICE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Price *</label>
-                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
+                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="Price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
 
                     {{-- Messaggio  --}}
                     @error('price')
@@ -108,8 +108,7 @@
                 {{-- HIDE --}}
                 <div class="form-check form-switch">
                     <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
-                    <input value="" class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault"
-                    {{ ( 'show' == 1) ? 'checked' : '' }}>
+                    <input onclick="checkboxClicked()" class="form-check-input checked" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault">
                 </div>
 
 
@@ -130,4 +129,16 @@
     </div>
 
 </main>
+
+<script>
+    function checkboxClicked() {
+  let checkBox = document.getElementById("flexSwitchCheckDefault");
+  if (checkBox.checked == true){
+    checkBox.value = 1; // Imposta il valore a true
+  } else {
+    checkBox.value = 0; // Imposta il valore a false
+  }
+}
+</script>
+
 @endsection

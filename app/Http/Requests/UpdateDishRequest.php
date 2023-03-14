@@ -26,8 +26,21 @@ class UpdateDishRequest extends FormRequest
             'cover_img' => 'nullable|image',
             'ingredients' => 'required|string',
             'description' => 'required|string',
-            'price' => 'required|numeric',
-            'hide' => 'nullable|boolean',
+            'price' => 'required|numeric|min:0',
+            'show' => 'nullable|boolean',
+        ];
+    }
+
+    public function messages() {
+        return [
+            "name.required" => "Il titolo è obbligatorio",
+            "name.max" =>  "Il titolo deve avere massimo :max caratteri",
+            "cover_img.image" => "L'immagine di copertina deve essere un'immagine",
+            "ingredients.required" => "Gli ingredienti sono obbligatori",
+            "description.required" => "Inserire una descrizione",
+            "price.required" => "Il prezzo da inserire è obbligatorio",
+            "price.min" => "Il prezzo deve essere maggiore di :min ",
+            // 'show.required' => 'La checkbox "Mostra" deve essere attivata',
         ];
     }
 }
