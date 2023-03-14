@@ -2,9 +2,7 @@
 
 namespace Database\Seeders;
 
-// use App\Functions\Helpers;
 use App\Models\Type;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class TypeSeeder extends Seeder
@@ -16,12 +14,37 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        $types = config('deliveboo_array.types');
+        $types =     
+        [
+            [
+                "name" => "Cinese",
+            ],
+    
+            [
+                "name" => "Giapponese",
+            ],
+    
+            [
+                "name" => "Pizzeria",
+            ],
+    
+            [
+                "name" => "Americano",
+            ],
+    
+            [
+                "name" => "Kebab",
+            ],
+    
+            [
+                "name" => "Bisteccheria",
+            ],
+        ];
 
         foreach($types as $type){
 
             $newtype = new Type();
-            $newtype->name = $type;
+            $newtype->name = $type['name'];
             // $newtype->slug = Helpers::generateSlug($newtype->name);
             $newtype->save();
         }
