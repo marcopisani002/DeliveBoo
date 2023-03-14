@@ -115,13 +115,8 @@
             <div class="form-check form-switch">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
                 <input onclick="checkboxClicked()" value='{{$dish->show}}' class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault" 
-                {{ ( $dish->show == 2) ? 'checked' : '' }}>
+                {{ ( $dish->show == 0) ? '' : 'checked' }}>
             </div>
-
-
-
-
-
 
         {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}
                 <div class="col-12">

@@ -27,7 +27,7 @@
 }
 
 .navbar-orange{
-    background-color: var(--light-golden-gate);
+    background-color: rgb(239,80,15);
     color: white;
 }
 
@@ -54,4 +54,9 @@ img{
     &:hover {
         color: rgb(53, 179, 120);
     }
+}
+
+.logo_laravel {
+    width: 160px;
+    background-color:  var(--light-golden-gate);
 }

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('ingredients');
             $table->text('description');
             $table->float('price');
-            $table->boolean('hide')->default(false);
+            $table->boolean('show')->default(true);
             $table->timestamps();
         });
     }

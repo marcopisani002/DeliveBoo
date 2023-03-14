@@ -27,7 +27,7 @@ class UpdateDishRequest extends FormRequest
             'ingredients' => 'required|string',
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
-            'show' => 'required|boolean',
+            'show' => 'nullable|boolean',
         ];
     }
 
@@ -40,7 +40,7 @@ class UpdateDishRequest extends FormRequest
             "description.required" => "Inserire una descrizione",
             "price.required" => "Il prezzo da inserire è obbligatorio",
             "price.min" => "Il prezzo deve essere maggiore di :min ",
-            'show' => 'La checkbox "Mostra" deve essere attivata',
+            // 'show.required' => 'La checkbox "Mostra" deve essere attivata',
         ];
     }
 }
