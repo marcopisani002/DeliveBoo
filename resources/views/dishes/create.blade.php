@@ -90,7 +90,7 @@
         {{-- INPUT PRICE --}}
                 <div class="col-12">
                     <label for="" class="form-label">Price *</label>
-                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
+                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="Price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
 
                     {{-- Messaggio  --}}
                     @error('price')

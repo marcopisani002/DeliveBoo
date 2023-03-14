@@ -10,19 +10,21 @@
                     Back to Dashboard
                 </a>
             </button>
-            @if ($userRestaurant->count() > 0)
+            @if (isset(Auth::user()->restaurant->id))
                 <button class="btn btn-info text-center"> 
-                <a href="{{route('dishes.create')}}" class="text-decoration-none">
-                    Add a dish to your menu
-                </a>
+                    <a href="{{route('dishes.create')}}" class="text-decoration-none">
+                        Add a dish to your menu
+                    </a>
                 </button>
+            @else
+                <h5><a href="{{ route('restaurants.create') }}" class="text-decoration-none text-white">
+                Non puoi creare piatti prima di aver creato il tuo ristorante, clicca qui per crearlo
+                </a></h5>
             @endif
         </div>
-
+        
         <div class="row mx-5">
-            @foreach ( $dishes as $dish )
-            @if($dish->show == true)
-                
+            @foreach ( $dishes as $dish )                
                 <div class="col-3 my-3">
                     <div class="card h-100 bg-form">
                         <div class="card-header">
@@ -56,7 +58,6 @@
                         </div>
                     </div>
                 </div>
-            @endif
             @endforeach
         </div>
     </main>

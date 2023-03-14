@@ -30,4 +30,17 @@ class UpdateDishRequest extends FormRequest
             'show' => 'required|boolean',
         ];
     }
+
+    public function messages() {
+        return [
+            "name.required" => "Il titolo è obbligatorio",
+            "name.max" =>  "Il titolo deve avere massimo :max caratteri",
+            "cover_img.image" => "L'immagine di copertina deve essere un'immagine",
+            "ingredients.required" => "Gli ingredienti sono obbligatori",
+            "description.required" => "Inserire una descrizione",
+            "price.required" => "Il prezzo da inserire è obbligatorio",
+            "price.min" => "Il prezzo deve essere maggiore di :min ",
+            'show' => 'La checkbox "Mostra" deve essere attivata',
+        ];
+    }
 }

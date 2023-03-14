@@ -37,7 +37,8 @@
                     Aggiungi
                 </a>
             </button>
-            <p><b>Non hai ancora aggiunto il tuo ristorante, ma puoi farlo subito con il pulsante qui sopra.</b></p>
+            <h5 class="text-decoration-none text-white"><b>Non hai ancora aggiunto il tuo ristorante, ma puoi farlo subito con il pulsante qui sopra.
+            </b></h5>
         @endif        
         </div>
 

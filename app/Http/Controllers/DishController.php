@@ -20,16 +20,13 @@ class DishController extends Controller
     public function index()
     {
         $user = Auth::user();
-        //RIGA 22-24 FUNZIONALE ALLA SINCRONIZZAZIONE DELLE
-        // FOREIGN KEY CON LE RELATIVE TABELLE. BRB LATER 
         $dishes = Dish::where('restaurant_id', $user->id)->get();
         
-      
-        $userRestaurant = Dish::where('restaurant_id', $user->id)->get();
+        // $userRestaurant = Restaurant::where('user_id', $user->id)->get();
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            'userRestaurant' => $userRestaurant,
+            // 'userRestaurant' => $userRestaurant,
         ]);
     }
 

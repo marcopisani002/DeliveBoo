@@ -5,9 +5,11 @@
             <div>
                 <h4 class="fs-4 text-white my-4">Benvenuto <strong> {{ Auth::user()->name }}
                     {{ Auth::user()->surname }}!</strong></h4>
+                @if ($restaurants->count() == 0)
                 <a class='text-white text-decoration-none' href="{{ route('restaurants.create') }}">
                     <b>Vuoi aggiungere il tuo ristorante?</b>
                 </a>
+                @endif
             </div>
             <div class="dropdown mt-4 mb-5">
                 <button class="btn btn-success dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown"

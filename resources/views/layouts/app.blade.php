@@ -54,10 +54,11 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ url('restaurants')}}">{{ __('Il tuo ristorante') }}</a>
                         </li>
-
+                        {{-- @if ($userRestaurant->count() > 0) --}}
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{url('dishes') }}">{{ __('I tuoi piatti') }}</a>
                         </li>
+                        {{-- @endif --}}
                     </ul>
 
                     <!-- Right Side Of Navbar -->
