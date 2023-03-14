@@ -2,6 +2,9 @@
 
 @section('content')
     <div class="container bg-form p-4 my-5 mx-auto">
+        <div class="text-white mb-3">
+            <b>I campi con * sono obbligatori</b>
+        </div>
         <form class="text-white " enctype="multipart/form-data" action="{{ route('restaurants.store') }}" method="POST">
             @csrf
                 <div class="mb-3">
@@ -47,7 +50,7 @@
                     </div>
 
                 <div class="mb-3">
-                    <div class="mb-1">Tipologie di cucina</div>
+                    <div class="mb-1">Tipologie di cucina *</div>
                      @foreach ($types as $type)
                         <div class="form-check form-check-inline @error('types') is-invalid @enderror">
                             <input class="form-check-input @error('types') is-invalid @enderror" type="checkbox" id="CheckType {{ $loop->index }}" value="{{ $type->id }}" name="types[]" {{ in_array( $type->id, old('types', [])) ? 'checked' : '' }}>
