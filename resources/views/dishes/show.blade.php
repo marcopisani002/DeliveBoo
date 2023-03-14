@@ -4,8 +4,8 @@
     <main class="container-fluid">
         <div class="container-fluid text-start">
             <button class="btn btn-warning m-3" class="text-decoration-none text-white">
-                <a href="{{ route('dashboard') }}">
-                    Back to Dashboard
+                <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
+                    Back to Dishes/Menu
                 </a>
             </button>
         </div>

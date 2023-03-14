@@ -123,8 +123,8 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
 
                     <button class="btn btn-warning m-3">
-                        <a href="{{route('dashboard')}}" class="text-decoration-none text-white">
-                            Back to Dashboard
+                        <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
+                            Back to Dishes/Menu
                         </a>
                     </button>
                 </div>
