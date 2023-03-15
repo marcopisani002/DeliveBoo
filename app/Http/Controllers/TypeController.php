@@ -11,9 +11,12 @@ class TypeController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+  {
+     $types = Type::all();
+
+	return response()->json($types);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -35,8 +38,9 @@ class TypeController extends Controller
      * Display the specified resource.
      */
     public function show(Type $type)
-    {
-        //
+   {
+        $type->all();
+        return response()->json($type);
     }
 
     /**

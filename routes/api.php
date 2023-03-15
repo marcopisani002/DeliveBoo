@@ -53,8 +53,7 @@ Route::group(['middleware' => 'auth:sanctum'], function(){
     Route::delete("/dishes/{dish}", [DishController::class, "destroy"]);
 
     //TYPE of cuisine
-    Route::get("/types", [TypeController::class, "index"]);
-    Route::post("/types", [TypeController::class, "store"]);
+
 
     //USER
     Route::get('/logout', [AuthController::class, "logoutUser"]);
