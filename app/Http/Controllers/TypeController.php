@@ -10,9 +10,8 @@ class TypeController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-  {
-     $types = Type::all();
+    public function index(){
+    $types = Type::all();
 
 	return response()->json($types);
     }
