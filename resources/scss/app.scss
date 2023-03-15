@@ -56,16 +56,14 @@ img{
     }
 }
 
-.form-control.success{
-    input{
-        border-color: green;
-    }
+
+.success{
+    border-color: green;
 }
 
-input{
-    .form-control.error{
-        border-color: red;
-    }
+
+.error{
+    border-color: red;
 }
 
 i{
@@ -75,31 +73,30 @@ i{
     visibility: hidden;
 }
 
-.form-control{
-    small{
-        visibility: visible;
+
+small{
+    .form-control{
+        .error{
+            visibility: hidden;
+            color: red;
+            position: absolute;
+            left: 0;
+        }
     }
 }
 
-.form-control.error{
-    small{
-        visibility: hidden;
-        color: red;
-        position: absolute;
-        left: 0;
-    }
+
+
+.fa-check-circle{
+    color: green;
+    visibility: visible;
 }
 
-.form-control.success{
-    .fa-check-circle{
-        color: green;
-        visibility: visible;
-    }
-}
 
-.form-control.error{
-    i.fa-exlamation-circle{
-        color: #ef3d17;
-        visibility: visible;
-    }
+
+
+
+.fa-exlamation-circle{
+    color: #ef3d17;
+    visibility: visible;
 }
