@@ -19,7 +19,7 @@ class DishSeeder extends Seeder
         
             [   
                 "name" => "Pollo alla Kung Pao",    
-                "cover_img" => "https://bakeitwithlove.com/wp-content/uploads/2020/05/Panda-Express-Kung-Pao-Chicken-lg-sq.jpg.webp",    
+                "cover_img" => "dish/pollokungpao.jpeg",    
                 "ingredients" => "pollo, peperoncini, arachidi",
                 "description" => "Un classico piatto cinese fatto con pollo saltato in padella, peperoncini e arachidi.",
                 "price" => "10.99",
@@ -28,7 +28,7 @@ class DishSeeder extends Seeder
             ],
             [   
                 "name" => "Pollo alla Kung Pao",    
-                "cover_img" => "https://bakeitwithlove.com/wp-content/uploads/2020/05/Panda-Express-Kung-Pao-Chicken-lg-sq.jpg.webp",    
+                "cover_img" => "dish/pollokungpao.jpeg",    
                 "ingredients" => "pollo, peperoncini, arachidi",
                 "description" => "Un classico piatto cinese fatto con pollo saltato in padella, peperoncini e arachidi.",
                 "price" => "10.99",
@@ -37,7 +37,7 @@ class DishSeeder extends Seeder
             ],
             [   
                 "name" => "Pollo alla Kung Pao",    
-                "cover_img" => "https://bakeitwithlove.com/wp-content/uploads/2020/05/Panda-Express-Kung-Pao-Chicken-lg-sq.jpg.webp",    
+                "cover_img" => "dish/pollokungpao.jpeg",    
                 "ingredients" => "pollo, peperoncini, arachidi",
                 "description" => "Un classico piatto cinese fatto con pollo saltato in padella, peperoncini e arachidi.",
                 "price" => "10.99",
@@ -46,7 +46,7 @@ class DishSeeder extends Seeder
             ],
             [   
                 "name" => "Pollo alla Kung Pao",    
-                "cover_img" => "https://bakeitwithlove.com/wp-content/uploads/2020/05/Panda-Express-Kung-Pao-Chicken-lg-sq.jpg.webp",    
+                "cover_img" => "dish/pollokungpao.jpeg",    
                 "ingredients" => "pollo, peperoncini, arachidi",
                 "description" => "Un classico piatto cinese fatto con pollo saltato in padella, peperoncini e arachidi.",
                 "price" => "10.99",
@@ -56,7 +56,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Ravioli al vapore",
-                "cover_img" => "https://images.unsplash.com/photo-1602143249253-9805c88841ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                "cover_img" => "dish/raviolialvapore.jpeg",    
                 "ingredients" => "carne di maiale, zenzero, cipolla verde",
                 "description" => "Deliziosi ravioli ripieni di carne di maiale, zenzero e cipolla verde.",
                 "price" => "8.50",
@@ -65,7 +65,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Ravioli al vapore",
-                "cover_img" => "https://images.unsplash.com/photo-1602143249253-9805c88841ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                "cover_img" => "dish/raviolialvapore.jpeg",    
                 "ingredients" => "carne di maiale, zenzero, cipolla verde",
                 "description" => "Deliziosi ravioli ripieni di carne di maiale, zenzero e cipolla verde.",
                 "price" => "8.50",
@@ -74,7 +74,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Ravioli al vapore",
-                "cover_img" => "https://images.unsplash.com/photo-1602143249253-9805c88841ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                "cover_img" => "dish/raviolialvapore.jpeg",    
                 "ingredients" => "carne di maiale, zenzero, cipolla verde",
                 "description" => "Deliziosi ravioli ripieni di carne di maiale, zenzero e cipolla verde.",
                 "price" => "8.50",
@@ -103,7 +103,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Maiale agrodolce",
-                "cover_img" => "https://i2.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2018/01/3476_Maiale.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/maialeagrodolce.jpg",    
                 "ingredients" => "maiale, ananas, peperoni",
                 "description" => "Un piatto di maiale agrodolce fatto con cubetti di maiale, ananas e peperoni in una salsa dolce e acidula.",
                 "price" => "12.99",
@@ -112,7 +112,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Maiale agrodolce",
-                "cover_img" => "https://i2.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2018/01/3476_Maiale.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/maialeagrodolce.jpg",    
                 "ingredients" => "maiale, ananas, peperoni",
                 "description" => "Un piatto di maiale agrodolce fatto con cubetti di maiale, ananas e peperoni in una salsa dolce e acidula.",
                 "price" => "12.99",
@@ -121,7 +121,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Maiale agrodolce",
-                "cover_img" => "https://i2.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2018/01/3476_Maiale.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/maialeagrodolce.jpg",    
                 "ingredients" => "maiale, ananas, peperoni",
                 "description" => "Un piatto di maiale agrodolce fatto con cubetti di maiale, ananas e peperoni in una salsa dolce e acidula.",
                 "price" => "12.99",
@@ -150,7 +150,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Gamberi in salsa di aglio",
-                "cover_img" => "https://wips.plug.it/cips/buonissimo.org/cms/2012/01/gamberi-all-aglio-in-salsa-piccante.jpg?w=713&a=c&h=407",
+                "cover_img" => "dish/gamberiallaglio.jpg",    
                 "ingredients" => "gamberi, aglio, peperoncino",
                 "description" => "Gamberi saltati in padella con aglio e peperoncino in una salsa piccante.",
                 "price" => "13.52",
@@ -159,7 +159,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Gamberi in salsa di aglio",
-                "cover_img" => "https://wips.plug.it/cips/buonissimo.org/cms/2012/01/gamberi-all-aglio-in-salsa-piccante.jpg?w=713&a=c&h=407",
+                "cover_img" => "dish/gamberiallaglio.jpg",    
                 "ingredients" => "gamberi, aglio, peperoncino",
                 "description" => "Gamberi saltati in padella con aglio e peperoncino in una salsa piccante.",
                 "price" => "13.52",
@@ -168,7 +168,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Gamberi in salsa di aglio",
-                "cover_img" => "https://wips.plug.it/cips/buonissimo.org/cms/2012/01/gamberi-all-aglio-in-salsa-piccante.jpg?w=713&a=c&h=407",
+                "cover_img" => "dish/gamberiallaglio.jpg",    
                 "ingredients" => "gamberi, aglio, peperoncino",
                 "description" => "Gamberi saltati in padella con aglio e peperoncino in una salsa piccante.",
                 "price" => "13.52",
@@ -177,7 +177,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Gamberi in salsa di aglio",
-                "cover_img" => "https://wips.plug.it/cips/buonissimo.org/cms/2012/01/gamberi-all-aglio-in-salsa-piccante.jpg?w=713&a=c&h=407",
+                "cover_img" => "dish/gamberiallaglio.jpg",    
                 "ingredients" => "gamberi, aglio, peperoncino",
                 "description" => "Gamberi saltati in padella con aglio e peperoncino in una salsa piccante.",
                 "price" => "13.52",
@@ -187,7 +187,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Anatra alla pechinese",
-                "cover_img" => "https://www.gustissimo.it/articoli/ricette/pollame/anatra-alla-pechinese.jpg",
+                "cover_img" => "dish/anatraallapechinese.jpg",
                 "ingredients" => "anatra, cipolla, pancake",
                 "description" => "Un piatto di anatra alla pechinese fatto con anatra cotta in umido, cipolla e pancake sottili.",
                 "price" => "16.99",
@@ -196,7 +196,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Anatra alla pechinese",
-                "cover_img" => "https://www.gustissimo.it/articoli/ricette/pollame/anatra-alla-pechinese.jpg",
+                "cover_img" => "dish/anatraallapechinese.jpg",
                 "ingredients" => "anatra, cipolla, pancake",
                 "description" => "Un piatto di anatra alla pechinese fatto con anatra cotta in umido, cipolla e pancake sottili.",
                 "price" => "16.99",
@@ -205,7 +205,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Anatra alla pechinese",
-                "cover_img" => "https://www.gustissimo.it/articoli/ricette/pollame/anatra-alla-pechinese.jpg",
+                "cover_img" => "dish/anatraallapechinese.jpg",
                 "ingredients" => "anatra, cipolla, pancake",
                 "description" => "Un piatto di anatra alla pechinese fatto con anatra cotta in umido, cipolla e pancake sottili.",
                 "price" => "16.99",
@@ -214,7 +214,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Anatra alla pechinese",
-                "cover_img" => "https://www.gustissimo.it/articoli/ricette/pollame/anatra-alla-pechinese.jpg",
+                "cover_img" => "dish/anatraallapechinese.jpg",
                 "ingredients" => "anatra, cipolla, pancake",
                 "description" => "Un piatto di anatra alla pechinese fatto con anatra cotta in umido, cipolla e pancake sottili.",
                 "price" => "16.99",
@@ -225,7 +225,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Manzo alla Szechuan",    
-                "cover_img" => "https://www.buttalapasta.it/wp-content/uploads/2021/02/manzo-stufato-alla-cinese.jpg",    
+                "cover_img" => "dish/manzoallaszechuan.jpg",    
                 "ingredients" => "manzo, peperoncini secchi, tofu",
                 "description" => "Un piatto piccante della cucina Szechuan, fatto con bocconcini di manzo, peperoncini secchi e tofu.",
                 "price" => "12.99",
@@ -235,7 +235,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Gamberi in salsa di fagioli neri",
-                "cover_img" => "https://www.dolcifrutti.it/risorse/ricette/thumbs/m_mexican-shrimp-salad-5.jpg",
+                "cover_img" => "dish/gamberisalsafagiolineri.jpg",    
                 "ingredients" => "gamberi, salsa di fagioli neri, zenzero, aglio",
                 "description" => "Un piatto salato e saporito con gamberi freschi e salsa di fagioli neri, insaporiti con zenzero e aglio.",
                 "price" => "14.99",
@@ -273,7 +273,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Tonkatsu",
-                "cover_img" => "https://images.unsplash.com/photo-1644037423703-e4a8e979fcf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "cover_img" => "dish/tonkatsu.jpg",
                 "ingredients" => "maiale, panko, uovo, farina, cavolo",
                 "description" => "Un piatto di maiale fritto impanato con panko, servito con cavolo tagliato sottile.",
                 "price" => "15.99",
@@ -282,7 +282,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Tonkatsu",
-                "cover_img" => "https://images.unsplash.com/photo-1644037423703-e4a8e979fcf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "cover_img" => "dish/tonkatsu.jpg",
                 "ingredients" => "maiale, panko, uovo, farina, cavolo",
                 "description" => "Un piatto di maiale fritto impanato con panko, servito con cavolo tagliato sottile.",
                 "price" => "15.99",
@@ -291,7 +291,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Tonkatsu",
-                "cover_img" => "https://images.unsplash.com/photo-1644037423703-e4a8e979fcf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "cover_img" => "dish/tonkatsu.jpg",
                 "ingredients" => "maiale, panko, uovo, farina, cavolo",
                 "description" => "Un piatto di maiale fritto impanato con panko, servito con cavolo tagliato sottile.",
                 "price" => "15.99",
@@ -300,7 +300,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Tonkatsu",
-                "cover_img" => "https://images.unsplash.com/photo-1644037423703-e4a8e979fcf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+                "cover_img" => "dish/tonkatsu.jpg",
                 "ingredients" => "maiale, panko, uovo, farina, cavolo",
                 "description" => "Un piatto di maiale fritto impanato con panko, servito con cavolo tagliato sottile.",
                 "price" => "15.99",
@@ -310,7 +310,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Soba noodles",
-                "cover_img" => "https://images.unsplash.com/photo-1496114212242-bac8bd9de53d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                "cover_img" => "dish/sobanoodles.jpg",
                 "ingredients" => "soba noodles, dashi, mirin, sake, nori",
                 "description" => "Un piatto di soba noodles in brodo dashi con mirin, sake e alga nori.",
                 "price" => "12.99",
@@ -319,7 +319,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Soba noodles",
-                "cover_img" => "https://images.unsplash.com/photo-1496114212242-bac8bd9de53d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+                "cover_img" => "dish/sobanoodles.jpg",
                 "ingredients" => "soba noodles, dashi, mirin, sake, nori",
                 "description" => "Un piatto di soba noodles in brodo dashi con mirin, sake e alga nori.",
                 "price" => "12.99",
@@ -462,7 +462,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Margherita",
-                "cover_img" => "https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+                "cover_img" => "dish/margherita.png",
                 "ingredients" => "pomodoro, mozzarella, basilico",
                 "description" => "Pizza con pomodoro, mozzarella e basilico fresco",
                 "price" => "8.99",
@@ -471,7 +471,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Margherita",
-                "cover_img" => "https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+                "cover_img" => "dish/margherita.png",
                 "ingredients" => "pomodoro, mozzarella, basilico",
                 "description" => "Pizza con pomodoro, mozzarella e basilico fresco",
                 "price" => "8.99",
@@ -480,7 +480,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Margherita",
-                "cover_img" => "https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+                "cover_img" => "dish/margherita.png",
                 "ingredients" => "pomodoro, mozzarella, basilico",
                 "description" => "Pizza con pomodoro, mozzarella e basilico fresco",
                 "price" => "8.99",
@@ -489,7 +489,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Margherita",
-                "cover_img" => "https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+                "cover_img" => "dish/margherita.png",
                 "ingredients" => "pomodoro, mozzarella, basilico",
                 "description" => "Pizza con pomodoro, mozzarella e basilico fresco",
                 "price" => "8.99",
@@ -498,7 +498,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Margherita",
-                "cover_img" => "https://images.unsplash.com/photo-1564936281291-294551497d81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1052&q=80",
+                "cover_img" => "dish/margherita.png",
                 "ingredients" => "pomodoro, mozzarella, basilico",
                 "description" => "Pizza con pomodoro, mozzarella e basilico fresco",
                 "price" => "8.99",
@@ -508,7 +508,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Prosciutto e funghi",
-                "cover_img" => "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/prosciuttoefunghi.png",
                 "ingredients" => "pomodoro, mozzarella, prosciutto cotto, funghi",
                 "description" => "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi champignon",
                 "price" => "10.99",
@@ -517,7 +517,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Prosciutto e funghi",
-                "cover_img" => "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/prosciuttoefunghi.png",
                 "ingredients" => "pomodoro, mozzarella, prosciutto cotto, funghi",
                 "description" => "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi champignon",
                 "price" => "10.99",
@@ -526,7 +526,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Prosciutto e funghi",
-                "cover_img" => "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/prosciuttoefunghi.png",
                 "ingredients" => "pomodoro, mozzarella, prosciutto cotto, funghi",
                 "description" => "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi champignon",
                 "price" => "10.99",
@@ -535,7 +535,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Prosciutto e funghi",
-                "cover_img" => "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/prosciuttoefunghi.png",
                 "ingredients" => "pomodoro, mozzarella, prosciutto cotto, funghi",
                 "description" => "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi champignon",
                 "price" => "10.99",
@@ -544,7 +544,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Prosciutto e funghi",
-                "cover_img" => "https://i1.wp.com/www.piccolericette.net/piccolericette/wp-content/uploads/2019/10/4102_Pizza.jpg?resize=895%2C616&ssl=1",
+                "cover_img" => "dish/prosciuttoefunghi.png",
                 "ingredients" => "pomodoro, mozzarella, prosciutto cotto, funghi",
                 "description" => "Pizza con pomodoro, mozzarella, prosciutto cotto e funghi champignon",
                 "price" => "10.99",
@@ -554,7 +554,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Diavola",
-                "cover_img" => "https://www.misya.info/wp-content/uploads/2007/08/Pizza-alla-diavola.jpg",
+                "cover_img" => "dish/diavola.jpg",
                 "ingredients" => "pomodoro, mozzarella, salame piccante, peperoncino",
                 "description" => "Pizza con pomodoro, mozzarella, salame piccante e peperoncino",
                 "price" => "9.99",
@@ -563,7 +563,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Diavola",
-                "cover_img" => "https://www.misya.info/wp-content/uploads/2007/08/Pizza-alla-diavola.jpg",
+                "cover_img" => "dish/diavola.jpg",
                 "ingredients" => "pomodoro, mozzarella, salame piccante, peperoncino",
                 "description" => "Pizza con pomodoro, mozzarella, salame piccante e peperoncino",
                 "price" => "9.99",
@@ -572,7 +572,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Diavola",
-                "cover_img" => "https://www.misya.info/wp-content/uploads/2007/08/Pizza-alla-diavola.jpg",
+                "cover_img" => "dish/diavola.jpg",
                 "ingredients" => "pomodoro, mozzarella, salame piccante, peperoncino",
                 "description" => "Pizza con pomodoro, mozzarella, salame piccante e peperoncino",
                 "price" => "9.99",
@@ -713,7 +713,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Pizza bianca",
-                "cover_img" => "https://www.lamiabuonaforchetta.it/wp-content/uploads/2018/01/MG_1360.jpg",
+                "cover_img" => "dish/bianca.jpg",
                 "ingredients" => "mozzarella, ricotta, prosciutto crudo, rucola",
                 "description" => "Pizza bianca con mozzarella, ricotta, prosciutto crudo e rucola fresca",
                 "price" => "12.99",
@@ -722,7 +722,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Pizza bianca",
-                "cover_img" => "https://www.lamiabuonaforchetta.it/wp-content/uploads/2018/01/MG_1360.jpg",
+                "cover_img" => "dish/bianca.jpg",
                 "ingredients" => "mozzarella, ricotta, prosciutto crudo, rucola",
                 "description" => "Pizza bianca con mozzarella, ricotta, prosciutto crudo e rucola fresca",
                 "price" => "12.99",
@@ -731,7 +731,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Pizza bianca",
-                "cover_img" => "https://www.lamiabuonaforchetta.it/wp-content/uploads/2018/01/MG_1360.jpg",
+                "cover_img" => "dish/bianca.jpg",
                 "ingredients" => "mozzarella, ricotta, prosciutto crudo, rucola",
                 "description" => "Pizza bianca con mozzarella, ricotta, prosciutto crudo e rucola fresca",
                 "price" => "12.99",
@@ -740,7 +740,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Pizza bianca",
-                "cover_img" => "https://www.lamiabuonaforchetta.it/wp-content/uploads/2018/01/MG_1360.jpg",
+                "cover_img" => "dish/bianca.jpg",
                 "ingredients" => "mozzarella, ricotta, prosciutto crudo, rucola",
                 "description" => "Pizza bianca con mozzarella, ricotta, prosciutto crudo e rucola fresca",
                 "price" => "12.99",
@@ -750,7 +750,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Hamburger",
-                "cover_img" => "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+                "cover_img" => "dish/hamburger.jpg",
                 "ingredients" => "pane per hamburger, carne di manzo, lattuga, pomodoro, cipolla, formaggio cheddar",
                 "description" => "Hamburger di carne di manzo con formaggio cheddar fuso, lattuga, pomodoro e cipolla su un morbido pane per hamburger",
                 "price" => "9.99",
@@ -759,7 +759,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hamburger",
-                "cover_img" => "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+                "cover_img" => "dish/hamburger.jpg",
                 "ingredients" => "pane per hamburger, carne di manzo, lattuga, pomodoro, cipolla, formaggio cheddar",
                 "description" => "Hamburger di carne di manzo con formaggio cheddar fuso, lattuga, pomodoro e cipolla su un morbido pane per hamburger",
                 "price" => "9.99",
@@ -768,7 +768,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hamburger",
-                "cover_img" => "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+                "cover_img" => "dish/hamburger.jpg",
                 "ingredients" => "pane per hamburger, carne di manzo, lattuga, pomodoro, cipolla, formaggio cheddar",
                 "description" => "Hamburger di carne di manzo con formaggio cheddar fuso, lattuga, pomodoro e cipolla su un morbido pane per hamburger",
                 "price" => "9.99",
@@ -777,7 +777,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hamburger",
-                "cover_img" => "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+                "cover_img" => "dish/hamburger.jpg",
                 "ingredients" => "pane per hamburger, carne di manzo, lattuga, pomodoro, cipolla, formaggio cheddar",
                 "description" => "Hamburger di carne di manzo con formaggio cheddar fuso, lattuga, pomodoro e cipolla su un morbido pane per hamburger",
                 "price" => "9.99",
@@ -786,7 +786,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hamburger",
-                "cover_img" => "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=999&q=80",
+                "cover_img" => "dish/hamburger.jpg",
                 "ingredients" => "pane per hamburger, carne di manzo, lattuga, pomodoro, cipolla, formaggio cheddar",
                 "description" => "Hamburger di carne di manzo con formaggio cheddar fuso, lattuga, pomodoro e cipolla su un morbido pane per hamburger",
                 "price" => "9.99",
@@ -796,7 +796,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Hot dog",
-                "cover_img" => "https://images.unsplash.com/photo-1599599810694-b5b37304c041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+                "cover_img" => "dish/hotdog.png",
                 "ingredients" => "pane per hot dog, salsiccia di pollo, ketchup, senape, cipolla fritta",
                 "description" => "Hot dog con salsiccia di pollo, ketchup, senape e cipolla fritta, servito su un morbido pane per hot dog",
                 "price" => "6.99",
@@ -805,7 +805,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hot dog",
-                "cover_img" => "https://images.unsplash.com/photo-1599599810694-b5b37304c041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+                "cover_img" => "dish/hotdog.png",
                 "ingredients" => "pane per hot dog, salsiccia di pollo, ketchup, senape, cipolla fritta",
                 "description" => "Hot dog con salsiccia di pollo, ketchup, senape e cipolla fritta, servito su un morbido pane per hot dog",
                 "price" => "6.99",
@@ -814,7 +814,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hot dog",
-                "cover_img" => "https://images.unsplash.com/photo-1599599810694-b5b37304c041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+                "cover_img" => "dish/hotdog.png",
                 "ingredients" => "pane per hot dog, salsiccia di pollo, ketchup, senape, cipolla fritta",
                 "description" => "Hot dog con salsiccia di pollo, ketchup, senape e cipolla fritta, servito su un morbido pane per hot dog",
                 "price" => "6.99",
@@ -823,7 +823,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hot dog",
-                "cover_img" => "https://images.unsplash.com/photo-1599599810694-b5b37304c041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+                "cover_img" => "dish/hotdog.png",
                 "ingredients" => "pane per hot dog, salsiccia di pollo, ketchup, senape, cipolla fritta",
                 "description" => "Hot dog con salsiccia di pollo, ketchup, senape e cipolla fritta, servito su un morbido pane per hot dog",
                 "price" => "6.99",
@@ -832,7 +832,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Hot dog",
-                "cover_img" => "https://images.unsplash.com/photo-1599599810694-b5b37304c041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80",
+                "cover_img" => "dish/hotdog.png",
                 "ingredients" => "pane per hot dog, salsiccia di pollo, ketchup, senape, cipolla fritta",
                 "description" => "Hot dog con salsiccia di pollo, ketchup, senape e cipolla fritta, servito su un morbido pane per hot dog",
                 "price" => "6.99",
@@ -907,7 +907,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Fried chicken",
-                "cover_img" => "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "cover_img" => "dish/friedchiken.png",
                 "ingredients" => "pollo fritto, salsa piccante, patatine fritte",
                 "description" => "Pollo fritto croccante con salsa piccante, servito con patatine fritte",
                 "price" => "12.99",
@@ -916,7 +916,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Fried chicken",
-                "cover_img" => "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "cover_img" => "dish/friedchiken.png",
                 "ingredients" => "pollo fritto, salsa piccante, patatine fritte",
                 "description" => "Pollo fritto croccante con salsa piccante, servito con patatine fritte",
                 "price" => "12.99",
@@ -925,7 +925,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Fried chicken",
-                "cover_img" => "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "cover_img" => "dish/friedchiken.png",
                 "ingredients" => "pollo fritto, salsa piccante, patatine fritte",
                 "description" => "Pollo fritto croccante con salsa piccante, servito con patatine fritte",
                 "price" => "12.99",
@@ -934,7 +934,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Fried chicken",
-                "cover_img" => "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "cover_img" => "dish/friedchiken.png",
                 "ingredients" => "pollo fritto, salsa piccante, patatine fritte",
                 "description" => "Pollo fritto croccante con salsa piccante, servito con patatine fritte",
                 "price" => "12.99",
@@ -943,7 +943,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Fried chicken",
-                "cover_img" => "https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+                "cover_img" => "dish/friedchiken.png",
                 "ingredients" => "pollo fritto, salsa piccante, patatine fritte",
                 "description" => "Pollo fritto croccante con salsa piccante, servito con patatine fritte",
                 "price" => "12.99",
@@ -1038,7 +1038,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Cornbread",
-                "cover_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/cornbread-recipe.jpg",
+                "cover_img" => "dish/cornbread.jpg",
                 "ingredients" => "farina di mais, zucchero, burro, latte",
                 "description" => "Pane di farina di mais dolce e morbido, perfetto come accompagnamento ai piatti americani",
                 "price" => "4.99",
@@ -1047,7 +1047,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Cornbread",
-                "cover_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/cornbread-recipe.jpg",
+                "cover_img" => "dish/cornbread.jpg",
                 "ingredients" => "farina di mais, zucchero, burro, latte",
                 "description" => "Pane di farina di mais dolce e morbido, perfetto come accompagnamento ai piatti americani",
                 "price" => "4.99",
@@ -1056,7 +1056,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Cornbread",
-                "cover_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/cornbread-recipe.jpg",
+                "cover_img" => "dish/cornbread.jpg",
                 "ingredients" => "farina di mais, zucchero, burro, latte",
                 "description" => "Pane di farina di mais dolce e morbido, perfetto come accompagnamento ai piatti americani",
                 "price" => "4.99",
@@ -1065,7 +1065,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Cornbread",
-                "cover_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/cornbread-recipe.jpg",
+                "cover_img" => "dish/cornbread.jpg",
                 "ingredients" => "farina di mais, zucchero, burro, latte",
                 "description" => "Pane di farina di mais dolce e morbido, perfetto come accompagnamento ai piatti americani",
                 "price" => "4.99",
@@ -1074,7 +1074,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Cornbread",
-                "cover_img" => "https://cdn.loveandlemons.com/wp-content/uploads/2020/10/cornbread-recipe.jpg",
+                "cover_img" => "dish/cornbread.jpg",
                 "ingredients" => "farina di mais, zucchero, burro, latte",
                 "description" => "Pane di farina di mais dolce e morbido, perfetto come accompagnamento ai piatti americani",
                 "price" => "4.99",
@@ -1346,7 +1346,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1355,7 +1355,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1364,7 +1364,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1373,7 +1373,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1382,7 +1382,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1391,7 +1391,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al pepe verde",
-                "cover_img" => "https://www.giallozafferano.it/images/184-18454/Filetto-al-pepe-verde_650x433_wm.jpg",
+                "cover_img" => "dish/filettopepeverde.png",
                 "ingredients" => "bistecca di manzo, sale, pepe verde, panna",
                 "description" => "Bistecca di manzo con una gustosa salsa al pepe verde, a base di panna e aromi",
                 "price" => "19.99",
@@ -1401,7 +1401,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca ai funghi",
-                "cover_img" => "https://media.grandchef.net/ricette/filetto-ai-funghi/galleria/filetto-ai-funghi.jpg",
+                "cover_img" => "dish/filettofunghi.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, funghi misti, prezzemolo",
                 "description" => "Bistecca di manzo servita con funghi misti trifolati e aromatizzati con prezzemolo",
                 "price" => "21.99",
@@ -1410,7 +1410,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai funghi",
-                "cover_img" => "https://media.grandchef.net/ricette/filetto-ai-funghi/galleria/filetto-ai-funghi.jpg",
+                "cover_img" => "dish/filettofunghi.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, funghi misti, prezzemolo",
                 "description" => "Bistecca di manzo servita con funghi misti trifolati e aromatizzati con prezzemolo",
                 "price" => "21.99",
@@ -1419,7 +1419,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai funghi",
-                "cover_img" => "https://media.grandchef.net/ricette/filetto-ai-funghi/galleria/filetto-ai-funghi.jpg",
+                "cover_img" => "dish/filettofunghi.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, funghi misti, prezzemolo",
                 "description" => "Bistecca di manzo servita con funghi misti trifolati e aromatizzati con prezzemolo",
                 "price" => "21.99",
@@ -1428,7 +1428,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai funghi",
-                "cover_img" => "https://media.grandchef.net/ricette/filetto-ai-funghi/galleria/filetto-ai-funghi.jpg",
+                "cover_img" => "dish/filettofunghi.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, funghi misti, prezzemolo",
                 "description" => "Bistecca di manzo servita con funghi misti trifolati e aromatizzati con prezzemolo",
                 "price" => "21.99",
@@ -1438,7 +1438,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca al gorgonzola",
-                "cover_img" => "https://www.giallozafferano.it/images/220-22064/Scaloppine-al-gorgonzola-con-noci-e-cacao_780x520_wm.jpg",
+                "cover_img" => "dish/bisteccagorgonzola.png",
                 "ingredients" => "bistecca di manzo, sale, pepe, gorgonzola, panna",
                 "description" => "Bistecca di manzo con una golosa salsa al gorgonzola, a base di panna e formaggio",
                 "price" => "19.99",
@@ -1447,7 +1447,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca al gorgonzola",
-                "cover_img" => "https://www.giallozafferano.it/images/220-22064/Scaloppine-al-gorgonzola-con-noci-e-cacao_780x520_wm.jpg",
+                "cover_img" => "dish/bisteccagorgonzola.png",
                 "ingredients" => "bistecca di manzo, sale, pepe, gorgonzola, panna",
                 "description" => "Bistecca di manzo con una golosa salsa al gorgonzola, a base di panna e formaggio",
                 "price" => "19.99",
@@ -1457,7 +1457,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1466,7 +1466,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1475,7 +1475,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1484,7 +1484,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1493,7 +1493,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1502,7 +1502,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1511,7 +1511,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla griglia",
-                "cover_img" => "https://mangiarebene.s3.amazonaws.com/uploads/recipe/image/2141/mb_asset.jpg",
+                "cover_img" => "dish/bisteccagriglia.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, erbe aromatiche",
                 "description" => "La classica bistecca alla griglia, cotta al punto giusto e insaporita con erbe aromatiche",
                 "price" => "18.99",
@@ -1521,7 +1521,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1530,7 +1530,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1539,7 +1539,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1548,7 +1548,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1557,7 +1557,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1566,7 +1566,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1575,7 +1575,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1584,7 +1584,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1593,7 +1593,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1602,7 +1602,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca con patate al forno",
-                "cover_img" => "https://www.alberghiera.it/Img/ricette/1832013-147-Tagliata-alla-rucola-con-patate-al-rosmarino.jpg",
+                "cover_img" => "dish/bisteccaconpatate.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, patate, rosmarino",
                 "description" => "Bistecca di manzo accompagnata da patate al forno profumate con rosmarino",
                 "price" => "20.99",
@@ -1613,7 +1613,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1622,7 +1622,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1631,7 +1631,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1640,7 +1640,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1649,7 +1649,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1658,7 +1658,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1667,7 +1667,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1676,7 +1676,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca ai ferri",
-                "cover_img" => "https://staticcookist.akamaized.net/wp-content/uploads/sites/21/2020/03/bistecca-alla-fiorentina.jpg",
+                "cover_img" => "dish/bisteccaferri.jpg",
                 "ingredients" => "bistecca di manzo, sale, pepe, aglio, prezzemolo",
                 "description" => "Bistecca di manzo marinata con aglio e prezzemolo, poi cotta ai ferri",
                 "price" => "19.99",
@@ -1686,7 +1686,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1695,7 +1695,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1704,7 +1704,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1713,7 +1713,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1722,7 +1722,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1731,7 +1731,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1740,7 +1740,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1749,7 +1749,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1758,7 +1758,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1767,7 +1767,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1776,7 +1776,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1785,7 +1785,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1794,7 +1794,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1803,7 +1803,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di maiale alla griglia",
-                "cover_img" => "https://cdn.ilclubdellericette.it/wp-content/uploads/2019/08/braciole-di-maiale-alla-griglia-1280x720.jpg",
+                "cover_img" => "dish/bisteccamaiale.jpg",
                 "ingredients" => "bistecca di maiale, sale, pepe, aglio",
                 "description" => "Bistecca di maiale cotta alla griglia con aglio e pepe",
                 "price" => "15.99",
@@ -1814,7 +1814,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca di pollo al limone",
-                "cover_img" => "https://www.mangiaconme.it/wp-content/uploads/2017/07/chicken_breast_with_lemon_sauce_161_risultato.jpg",
+                "cover_img" => "dish/bisteccalimone.jpg",
                 "ingredients" => "bistecca di pollo, sale, pepe, limone",
                 "description" => "Bistecca di pollo marinata con limone e poi grigliata",
                 "price" => "13.99",
@@ -1823,7 +1823,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di pollo al limone",
-                "cover_img" => "https://www.mangiaconme.it/wp-content/uploads/2017/07/chicken_breast_with_lemon_sauce_161_risultato.jpg",
+                "cover_img" => "dish/bisteccalimone.jpg",
                 "ingredients" => "bistecca di pollo, sale, pepe, limone",
                 "description" => "Bistecca di pollo marinata con limone e poi grigliata",
                 "price" => "13.99",
@@ -1832,7 +1832,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di pollo al limone",
-                "cover_img" => "https://www.mangiaconme.it/wp-content/uploads/2017/07/chicken_breast_with_lemon_sauce_161_risultato.jpg",
+                "cover_img" => "dish/bisteccalimone.jpg",
                 "ingredients" => "bistecca di pollo, sale, pepe, limone",
                 "description" => "Bistecca di pollo marinata con limone e poi grigliata",
                 "price" => "13.99",
@@ -1841,7 +1841,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca di pollo al limone",
-                "cover_img" => "https://www.mangiaconme.it/wp-content/uploads/2017/07/chicken_breast_with_lemon_sauce_161_risultato.jpg",
+                "cover_img" => "dish/bisteccalimone.jpg",
                 "ingredients" => "bistecca di pollo, sale, pepe, limone",
                 "description" => "Bistecca di pollo marinata con limone e poi grigliata",
                 "price" => "13.99",
@@ -1851,7 +1851,7 @@ class DishSeeder extends Seeder
         
             [
                 "name" => "Bistecca alla pizzaiola",
-                "cover_img" => "https://www.chiarapassion.com/wp-content/uploads/2018/11/carne-alla-pizzaiola-ricetta.jpg",
+                "cover_img" => "dish/bisteccapizzaiola.jpg",
                 "ingredients" => "bistecca di manzo, pomodoro, cipolla, origano, aglio",
                 "description" => "Bistecca di manzo cotta in una gustosa salsa di pomodoro, cipolla e spezie",
                 "price" => "21.99",
@@ -1860,7 +1860,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla pizzaiola",
-                "cover_img" => "https://www.chiarapassion.com/wp-content/uploads/2018/11/carne-alla-pizzaiola-ricetta.jpg",
+                "cover_img" => "dish/bisteccapizzaiola.jpg",
                 "ingredients" => "bistecca di manzo, pomodoro, cipolla, origano, aglio",
                 "description" => "Bistecca di manzo cotta in una gustosa salsa di pomodoro, cipolla e spezie",
                 "price" => "21.99",
@@ -1869,7 +1869,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla pizzaiola",
-                "cover_img" => "https://www.chiarapassion.com/wp-content/uploads/2018/11/carne-alla-pizzaiola-ricetta.jpg",
+                "cover_img" => "dish/bisteccapizzaiola.jpg",
                 "ingredients" => "bistecca di manzo, pomodoro, cipolla, origano, aglio",
                 "description" => "Bistecca di manzo cotta in una gustosa salsa di pomodoro, cipolla e spezie",
                 "price" => "21.99",
@@ -1878,7 +1878,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla pizzaiola",
-                "cover_img" => "https://www.chiarapassion.com/wp-content/uploads/2018/11/carne-alla-pizzaiola-ricetta.jpg",
+                "cover_img" => "dish/bisteccapizzaiola.jpg",
                 "ingredients" => "bistecca di manzo, pomodoro, cipolla, origano, aglio",
                 "description" => "Bistecca di manzo cotta in una gustosa salsa di pomodoro, cipolla e spezie",
                 "price" => "21.99",
@@ -1887,7 +1887,7 @@ class DishSeeder extends Seeder
             ],
             [
                 "name" => "Bistecca alla pizzaiola",
-                "cover_img" => "https://www.chiarapassion.com/wp-content/uploads/2018/11/carne-alla-pizzaiola-ricetta.jpg",
+                "cover_img" => "dish/bisteccapizzaiola.jpg",
                 "ingredients" => "bistecca di manzo, pomodoro, cipolla, origano, aglio",
                 "description" => "Bistecca di manzo cotta in una gustosa salsa di pomodoro, cipolla e spezie",
                 "price" => "21.99",

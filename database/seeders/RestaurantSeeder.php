@@ -23,7 +23,7 @@ class RestaurantSeeder extends Seeder
                     "address" => "Via del Corso, 15, 00186 Roma",
                     "vat" => "92255625968",
                     "phone_number" => "3774362879",
-                    "cover_img" => "https://media.posterlounge.com/images/l/1895299.jpg",
+                    "cover_img" => "restaurant/1gustoitaliano.jpg",
                     "user_id" => 1,
                 ],
         
@@ -33,7 +33,7 @@ class RestaurantSeeder extends Seeder
                     "address" => "Via crociata, 22, 00186 Roma",
                     "vat" => "76723625922",
                     "phone_number" => "3774552773",
-                    "cover_img" => "https://images.dissapore.com/wp-content/uploads/2020/01/gusto_nebbia_esterno_.jpeg",
+                    "cover_img" => "restaurant/2gustodellanebbia.jpeg",
                     "user_id" => 2,
                 ],
         

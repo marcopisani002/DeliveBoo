@@ -110,17 +110,35 @@ class DishController extends Controller
         if (!isset($data["show"])) {
             $dish['show']=0;
         }
-        
-        if (isset($data->cover_img)) {
-            $path = Storage::put("dish", $data["cover_img"]);
-            $dish->cover_img = $path;
-        }
-        $dish->update($data);
-        // $dish->save();
-        // dd($dish, $data);
+        if ($request->has('cover_img')) {
+            // Salva il percorso della nuova immagine
+            $newCoverImgPath = $request->file('cover_img')->store('dish');
+            
+            // Cancella l'immagine precedente (se presente)
+            if ($dish->cover_img) {
+                Storage::disk('public')->delete($dish->cover_img);
+            }
+            
+            $dish->update($data);
+            // Aggiorna il valore della chiave "cover_img" con il nuovo percorso
+            $dish->update(['cover_img' => $newCoverImgPath]);
 
         return redirect()->route("dishes.show", $dish->id);
+        }
     }
+
+    // $data = $request->validated();
+    // if (!isset($data["show"])) {
+    //     $dish['show']=0;
+    // }
+    
+    // if (isset($data->cover_img)) {
+    //     $path = Storage::put("dish", $data["cover_img"]);
+    //     $dish->cover_img = $path;
+    // }
+    // $dish->update($data);
+
+    // return redirect()->route("dishes.show", $dish->id);
 
     /**
      * Remove the specified resource from storage.
