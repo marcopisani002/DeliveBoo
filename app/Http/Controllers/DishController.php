@@ -109,7 +109,10 @@ class DishController extends Controller
         $data = $request->validated();
         if (!isset($data["show"])) {
             $dish['show']=0;
+        } else {
+            $dish['show']=1;
         }
+
         if ($request->has('cover_img')) {
             // Salva il percorso della nuova immagine
             $newCoverImgPath = $request->file('cover_img')->store('dish');
@@ -119,12 +122,25 @@ class DishController extends Controller
                 Storage::disk('public')->delete($dish->cover_img);
             }
             
-            $dish->update($data);
             // Aggiorna il valore della chiave "cover_img" con il nuovo percorso
             $dish->update(['cover_img' => $newCoverImgPath]);
+        }
+        $dish->update(['name' => $request['name']]);
+        $dish->update(['description' => $request['description']]);
+        $dish->update(['ingredients' => $request['ingredients']]);
+        $dish->update(['price' => $request['price']]);
+
+        if (isset($data["show"])) {
+        $dish->update(['show' => $data['show']]);
+        }
+        // dd($request, $data, $dish);
+
+        // $dish->update(['description' => $newCoverImgPath]);
+        // $dish->update(['ingredients' => $newCoverImgPath]);
+        // $dish->update(['price' => $newCoverImgPath]);
+        // $dish->update(['show' => $newCoverImgPath]);
 
         return redirect()->route("dishes.show", $dish->id);
-        }
     }
 
     // $data = $request->validated();
