@@ -36,28 +36,3 @@ Route::post('/register', [AuthController::class, "register"]);
 Route::get("/dishes", [DishController::class, "index"]);
 //order.store = which is a form whre the customer put his information (the checkout step)
 
-
-
-//PRIVATE:
-
-Route::group(['middleware' => 'auth:sanctum'], function(){
-    //RESTAURANT
-    Route::post("/restaurants", [RestaurantController::class, "store"]);
-    Route::get("/restaurants/{restaurant}", [RestaurantController::class, "show"]);
-    
-    //DISH
-    // Route::get("/dishes", [DishController::class, "index"]);
-    Route::post("/dishes", [DishController::class, "store"]);
-    Route::get("/dish/{dish}", [DishController::class, "show"]);
-    Route::put("/dish/{dish}", [DishController::class, "update"]);
-    Route::delete("/dishes/{dish}", [DishController::class, "destroy"]);
-
-    //TYPE of cuisine
-
-
-    //USER
-    Route::get('/logout', [AuthController::class, "logoutUser"]);
-
-    //ORDER
-    //index == where we visualise all user and cart infromations 
-});
