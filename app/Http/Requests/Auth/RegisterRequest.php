@@ -29,4 +29,19 @@ class RegisterRequest extends FormRequest
             'password' => 'required| min:8|confirmed',
         ];
     }
+
+    public function messages()
+    {
+        return [
+            "name.required" => "Il nome è obbligatorio",
+            "name.min" =>  "Il nome deve avere minimo :min caratteri",
+            "surname.required" => "Il cognome è obbligatorio",
+            "surname.min" =>  "Il cognome deve avere minimo :min caratteri",
+            "email.required" => "L'email è obbligatoria",
+            "email.unique:users" => "L'email inserita risulta già nel nostro database",
+            "password.required" => "La password è obbligatoria",
+            "password.min" => "La password deve avere un minimo :min caratteri",
+            "password.confirmed" => "Le password devono combaciare",
+        ];
+    }
 }
