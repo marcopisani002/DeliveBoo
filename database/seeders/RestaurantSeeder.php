@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Functions\Helpers;
 use Illuminate\Database\Seeder;
 use App\Models\Restaurant;
 
@@ -220,7 +221,7 @@ class RestaurantSeeder extends Seeder
         foreach ($restaurants as $key => $restaurant) {
             $newrestaurant = new Restaurant();
             $newrestaurant->name = $restaurant['name'];
-            // $newrestaurant->slug = Helpers::generateSlug($newrestaurant->restaurant_name);
+            $newrestaurant->slug = Helpers::generateSlug($newrestaurant->name);
             $newrestaurant->address = $restaurant['address'];
             $newrestaurant->vat = $restaurant['vat'];
             $newrestaurant->phone_number = $restaurant['phone_number'];
