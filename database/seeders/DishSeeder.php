@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Dish;
-use App\Models\Restaurant;
+use App\Functions\Helpers;
 
 class DishSeeder extends Seeder
 {
@@ -1900,7 +1900,7 @@ class DishSeeder extends Seeder
             foreach ($dish['restaurant_id'] as $dishfororder) {
                 $newdish = new Dish();
                 $newdish->name = $dish['name'];
-                // $newdish->slug = Dish::getSlug($newdish->name, $restaurant);
+                $newdish->slug = Helpers::generateSlug($newdish->name);
                 $newdish->cover_img = $dish['cover_img'];
                 $newdish->ingredients = $dish['ingredients'];
                 $newdish->description = $dish['description'];
