@@ -4,18 +4,25 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+
 
 class RestaurantController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $restaurants = Restaurant::all();
+
+        $typeFilter = $request->input('type');
+        if ($typeFilter){
+            $restaurants = Type::findOrFail($typeFilter)->restaurants()->with("types")->get();
+        }
 
 	return response()->json($restaurants);
     }
