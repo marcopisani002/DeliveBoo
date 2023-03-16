@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class RestaurantController extends Controller
@@ -52,10 +53,15 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Restaurant $restaurant)
+    public function show($id)
     {
-        $restaurant->all();
-        return response()->json($restaurant);
+        $restaurant = Restaurant::findOrFail($id);
+        $restaurant_id = Auth::user()->restaurant->id;
+
+        if ($restaurant_id !== $restaurant->restaurant_id) {
+            abort(403);
+        }
+        return view('restaurants.show', compact('restaurant'));
     }
 
     /**
