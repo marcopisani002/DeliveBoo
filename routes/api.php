@@ -21,9 +21,9 @@ use Illuminate\Support\Facades\Route;
 //old notes:
 // Route::post("/restaurant-check", [RestaurantController::class, "store"]);
 // Route::post('/user-registration', [AuthController::class, "store"]);
- Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-     return $request->user();
- });
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 Route::get("/restaurants", [RestaurantController::class, "index"]);
 Route::get("/restaurants/{restaurant}", [RestaurantController::class, "show"]);
