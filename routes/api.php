@@ -22,11 +22,12 @@ use Illuminate\Support\Facades\Route;
 // Route::post("/restaurant-check", [RestaurantController::class, "store"]);
 // Route::post('/user-registration', [AuthController::class, "store"]);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-     return $request->user();
+    return $request->user();
 });
 
 Route::get("/restaurants", [RestaurantController::class, "index"]);
 Route::get("/restaurants/{restaurant}", [RestaurantController::class, "show"]);
+Route::get("/restaurants/types/{type}",[RestaurantController::class,"TypeSearch"]);
 
 Route::get("/types", [TypeController::class, "index"]);
 
