@@ -19,12 +19,28 @@ class RestaurantController extends Controller
     {
         $restaurants = Restaurant::all();
 
-        $typeFilter = $request->input('type');
-        if ($typeFilter){
-            $restaurants = Type::findOrFail($typeFilter)->restaurants()->with("types")->get();
-        }
+        // $typeFilter = $request->input('type');
+        // if ($typeFilter){
+        //     $restaurants = Type::findOrFail($typeFilter)->restaurants()->with("types")->get();
+        // }
 
 	return response()->json($restaurants);
+    }
+
+
+    public function TypeSearch($type)
+    {
+
+        $restaurants = Restaurant::whereHas('types', function($query) use ($type) {
+            $query->where('types.id', $type);
+        })->get();
+        $restaurants->load('types');
+
+        return response()->json([
+            "restaurants" => $restaurants,
+
+        ]);
+
     }
 
     /**
