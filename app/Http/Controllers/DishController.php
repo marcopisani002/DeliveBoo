@@ -8,9 +8,12 @@ use App\Models\Restaurant;
 use App\Http\Requests\StoreDishRequest;
 use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\Exists;
+use App\Functions\Helpers;
+
 
 class DishController extends Controller
 {
@@ -26,7 +29,6 @@ class DishController extends Controller
 
         return view('dishes.index', [
             'dishes' => $dishes,
-            // 'userRestaurant' => $userRestaurant,
         ]);
     }
 
@@ -35,11 +37,8 @@ class DishController extends Controller
      */
     public function create()
     {
-        $dishes = Dish::all();
 
-        return view('dishes.create', [
-            'dishes' => $dishes,
-        ]);
+        return view('dishes.create');
     }
 
     /**
@@ -47,21 +46,27 @@ class DishController extends Controller
      */
     public function store(StoreDishRequest $request, Dish $dish)
     {
-        // $user = Auth::user();
         $data = $request->validated();
-        $path = Storage::put("dish", $data["cover_img"]);
-        $dish->fill($data);
 
+        $restaurant_id = Auth::user()->restaurant->id;
+        $data['restaurant_id'] = $restaurant_id;
+
+        $slug = Dish::getSlug($request->name);
+
+        $path = Storage::put("dish", $data["cover_img"]);
+        // $dish->fill($data);
         $user = Auth::user();
         if (!isset($data["show"])) {
             $data['show']=0;
         }
         // $data["cover_img"] = $path;
         // $data["restaurant_id"] = $user->id;
+        $data['restaurant_id'] = $restaurant_id;
         
         $dish = new Dish;
         $dish->cover_img = $path;
         $dish->name = $data['name'];
+        $dish->slug =  Dish::getSlug($data['name'], $restaurant_id);
         $dish->description = $data['description'];
         $dish->ingredients = $data['ingredients'];
         $dish->price = $data['price'];
@@ -69,50 +74,73 @@ class DishController extends Controller
         $dish["restaurant_id"] = $user->id;
         $dish->save();
         
-        return redirect()->route("dishes.show", compact('dish'));
+        return redirect()->route("dishes.show", compact('slug'));
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($slug)
     {
-        $dish = Dish::findOrFail($id);
+        $user = Auth::user();
         $restaurant_id = Auth::user()->restaurant->id;
-
-        if ($restaurant_id !== $dish->restaurant_id) {
-            abort(403);
-        }
-        return view('dishes.show', compact('dish'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit($id)
-    {
-        $dish = Dish::findOrFail($id);
-        $restaurant_id = Auth::user()->restaurant->id;
+        $dish_array = Dish::where('restaurant_id', $user->id)
+        ->where('slug', $slug)
+        ->get();
+        $dish = $dish_array[0];
 
         if ($restaurant_id !== $dish->restaurant_id) {
             abort(403);
         }
         
-        return view('dishes.edit', compact('dish'));
+        return view('dishes.show',compact('dish')); 
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit($slug)
+    {
+        $user = Auth::user();
+        $restaurant_id = Auth::user()->restaurant->id;
+        $dish_array = Dish::where('restaurant_id', $user->id)
+        ->where('slug', $slug)
+        ->get();
+        $dish = $dish_array[0];
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort(403);
+        }
+        
+        return view('dishes.edit',[
+            'dish' => $dish,
+            'slug' => $dish->slug
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDishRequest $request, Dish $dish)
+    public function update(UpdateDishRequest $request, $slug)
     {
         $data = $request->validated();
+        $user = Auth::user();
+        
+        $slug = Dish::getSlug($request->name);
+        $dish_array = Dish::where('restaurant_id', $user->id)
+        ->where('slug', $slug)
+        ->get();
+        $dish = $dish_array[0];
+        // dd($slug, $id);
+        // $dish = Dish::firstOrFail($id);
+        $restaurant_id = Auth::user()->restaurant->id;
+        $data['restaurant_id'] = $restaurant_id;
+        
         if (!isset($data["show"])) {
-            $dish['show']=0;
+            $data['show']=0;
         } else {
-            $dish['show']=1;
+            $data['show']=1;
         }
-
+        
         if ($request->has('cover_img')) {
             // Salva il percorso della nuova immagine
             $newCoverImgPath = $request->file('cover_img')->store('dish');
@@ -125,50 +153,37 @@ class DishController extends Controller
             // Aggiorna il valore della chiave "cover_img" con il nuovo percorso
             $dish->update(['cover_img' => $newCoverImgPath]);
         }
+
         $dish->update(['name' => $request['name']]);
         $dish->update(['description' => $request['description']]);
         $dish->update(['ingredients' => $request['ingredients']]);
         $dish->update(['price' => $request['price']]);
-
-        if (isset($data["show"])) {
         $dish->update(['show' => $data['show']]);
-        }
-        // dd($request, $data, $dish);
-
+        // dd($dish, $data);
         // $dish->update(['description' => $newCoverImgPath]);
         // $dish->update(['ingredients' => $newCoverImgPath]);
         // $dish->update(['price' => $newCoverImgPath]);
         // $dish->update(['show' => $newCoverImgPath]);
-
-        return redirect()->route("dishes.show", $dish->id);
+        return redirect()->route("dishes.show", compact('slug'));
     }
-
-    // $data = $request->validated();
-    // if (!isset($data["show"])) {
-    //     $dish['show']=0;
-    // }
-    
-    // if (isset($data->cover_img)) {
-    //     $path = Storage::put("dish", $data["cover_img"]);
-    //     $dish->cover_img = $path;
-    // }
-    // $dish->update($data);
-
-    // return redirect()->route("dishes.show", $dish->id);
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy($id)
     {
+        $restaurant_id = Auth::user()->restaurant->id;
         $dish = Dish::findOrFail($id);
 
+        if ($restaurant_id !== $dish->restaurant_id) {
+            abort(403);
+        }
         if ($dish->cover_img) {
             Storage::delete($dish->cover_img);
         }
 
         $dish->delete();
 
-        return redirect()->route("dishes.index", $dish->id);
+        return redirect()->route("dishes.index", $dish->slug);
     }
 }

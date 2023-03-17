@@ -24,7 +24,9 @@
         </div>
         
         <div class="row mx-5">
+            @if(count($dishes) > 0)
             <h1>Piatti Abilitati</h1>
+            @endif
             @foreach ( $dishes as $dish )
                 @if($dish->show == 1)
                     
@@ -43,9 +45,9 @@
                                         <p><b>Mostra: </b>{{$dish->show == true ? 'on' : 'off'}}</p>
                                     </div>
                                     <div class="card-body">
-                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
+                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
 
-                                        <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST">
+                                        <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button class=" btn btn-danger mt-3 text-white border-0" type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo piatto?')">Elimina</button>
@@ -60,7 +62,10 @@
                 </div>
                 @endif
             @endforeach
+            
+            @if(count($dishes) > 0)
             <h1>Piatti Disabilitati</h1>
+            @endif            
             @foreach ( $dishes as $dish )
                 @if($dish->show == 0)
                     
@@ -79,7 +84,7 @@
                                         <p><b>Mostra: </b>{{$dish->show == true ? 'on' : 'off'}}</p>
                                     </div>
                                     <div class="card-body">
-                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->id)}}" class="text-decoration-none">Modifica</a></button>
+                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
 
                                         <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST">
                                             @csrf
