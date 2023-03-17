@@ -47,22 +47,27 @@ class RestaurantController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(StoreRestaurantRequest $request)
-    {$user = Auth::user();
-        $data = $request->validated();
-        $restaurant = Restaurant::create([
-            ...$data,
-            "cover_img" => $path ?? '',
-             // recuperiamo l'id dagli user cioé user_id é uguale all'utente loggato
-            "user_id" => $user->id,
-        ]);
-        
+    {
         $types = Type::all();
+        $user = Auth::user();
+        $data = $request->validated();
+        // $data["slug"] = Restaurant::getSlug($request->name);
+        // $restaurant = new Restaurant;
+        // $restaurant->fill($data);
         $path = Storage::put("restaurant", $data["cover_img"]);
+        // $restaurant->cover_img = $path;
+        $data['restaurant_id'] = $user->id;
+        $data['slug'] = Restaurant::getSlug($request->name);
         
-        $restaurant->fill($data);
-        $restaurant->cover_img = $path;
-        $restaurant->save();
-        
+        $restaurant = Restaurant::create([
+            'name' => $data['name'],
+            'slug' => $data['slug'],
+            'phone_number' => $data['phone_number'],
+            'cover_img' => $path,
+            'vat' => $data['vat'],
+            'address' => $data['address'],
+            'user_id' => $data['restaurant_id']
+        ]);
         if (key_exists('types', $data)){
             $restaurant->types()->attach($data["types"]);
         }

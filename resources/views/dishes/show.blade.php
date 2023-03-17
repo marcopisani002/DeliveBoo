@@ -23,9 +23,9 @@
                             <p class="card-text"><b>Prezzo: </b>€{{ $dish->price }}</p>
                             <p><b>Show: </b>{{ $dish->show == 1 ? 'on' : 'off' }}</p>
 
-                            <button class="btn btn-info"> <a href="{{ route('dishes.edit', $dish->id) }}"
+                            <button class="btn btn-info"> <a href="{{ route('dishes.edit', $dish->slug) }}"
                                     class="text-decoration-none">Modifica</a></button>
-                            <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST" id="form-delete">
+                            <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST" id="form-delete">
                                 @csrf()
                                 @method('delete')
 

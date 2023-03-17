@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class Restaurant extends Model
 {
@@ -20,6 +21,15 @@ class Restaurant extends Model
 
     ];
     use HasFactory;
+    
+
+    public static function getSlug($name)
+    {
+        $slug = Str::slug($name);
+        
+        return $slug;
+
+    }
 
     public function user(){
         return $this->belongsTo(User::class);
