@@ -35,15 +35,16 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('restaurants', RestaurantController::class);
-    Route::get("/dishes/create", [DishController::class, "create"])->name('dishes.create');
-    // Route::resource('dishes', DishController::class);
     Route::get("/dishes", [DishController::class, "index"])->name('dishes.index');
+    Route::get("/dishes/create", [DishController::class, "create"])->name('dishes.create');
     Route::get("/dishes/{slug}", [DishController::class, "show"])->name('dishes.show');
     Route::get('/dishes/{slug}/edit', [DishController::class, 'edit'])->name('dishes.edit');
     Route::put('/dishes/{slug}', [DishController::class, 'update'])->name('dishes.update');
     Route::delete('/dishes/{slug}', [DishController::class, 'destroy'])->name('dishes.destroy');
+    Route::post("/dishes", [DishController::class, "store"])->name('dishes.store');
 });
-Route::post("/dishes", [DishController::class, "store"])->name('dishes.store');
+// Route::post("/restaurants", [RestaurantController::class, "store"])->name('restaurants.store');
+
 
 // Route::middleware(['auth', 'verified'])
 //     ->group(function () {

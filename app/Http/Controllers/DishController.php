@@ -73,7 +73,6 @@ class DishController extends Controller
         $dish->show = $data['show'];
         $dish["restaurant_id"] = $user->id;
         $dish->save();
-        
         return redirect()->route("dishes.show", compact('slug'));
     }
 
@@ -170,20 +169,20 @@ class DishController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
-    {
-        $restaurant_id = Auth::user()->restaurant->id;
-        $dish = Dish::findOrFail($id);
+    public function destroy($slug)
+        {
+            $restaurant_id = Auth::user()->restaurant->id;
+            $dish = Dish::findOrFail($slug);
 
-        if ($restaurant_id !== $dish->restaurant_id) {
-            abort(403);
+            if ($restaurant_id !== $dish->restaurant_id) {
+                abort(403);
+            }
+            if ($dish->cover_img) {
+                Storage::delete($dish->cover_img);
+            }
+    
+            $dish->delete();
+    
+            return redirect()->route("dishes.index", $dish->slug);
         }
-        if ($dish->cover_img) {
-            Storage::delete($dish->cover_img);
-        }
-
-        $dish->delete();
-
-        return redirect()->route("dishes.index", $dish->slug);
-    }
 }
