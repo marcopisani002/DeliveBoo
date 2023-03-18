@@ -4,14 +4,14 @@
     <main class="container-fluid">
         <div class="container-fluid text-start">
             <button class="btn btn-warning m-3" class="text-decoration-none text-white">
-                <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
+                <a href="{{ route('dishes.index') }}" class="text-decoration-none text-white">
                     Back to Dishes/Menu
                 </a>
             </button>
         </div>
 
         <div class="row mx-5">
-            <div class="col-6 my-3">
+            <div class="col-lg-4 col-md-8 col-sm-12 my-3">
                 <div class="bg-form">
                     <div class="card h-100 bg-form">
                         <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top h-50" alt="...">
@@ -23,16 +23,22 @@
                             <p class="card-text"><b>Prezzo: </b>€{{ $dish->price }}</p>
                             <p><b>Show: </b>{{ $dish->show == 1 ? 'on' : 'off' }}</p>
 
-                            <button class="btn btn-info"> <a href="{{ route('dishes.edit', $dish->slug) }}"
-                                    class="text-decoration-none">Modifica</a></button>
-                            <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST" id="form-delete">
-                                @csrf()
-                                @method('delete')
+                            <div class="d-flex justify-content-evenly align-items-center">
+                                <button class="btn btn-info my-3"> <a href="{{ route('dishes.edit', $dish->slug) }}"
+                                        class="text-decoration-none">Modifica</a></button>
+                                <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST" id="form-delete">
+                                    @csrf()
+                                    @method('delete')
 
-                                <button class="btn btn-danger my-3">
-                                    <i class="fas fa-trash w-3">Elimina</i>
-                                </button>
-                            </form>
+                                    <button class="btn btn-danger">
+                                        
+                                        <div class="">
+                                            <i class="fas fa-trash"></i>
+                                            <p class="">Elimina</p>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
 
                         <script>
