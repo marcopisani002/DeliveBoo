@@ -12,7 +12,7 @@
         @if ($restaurants->count() > 0)
             @foreach ($restaurants as $restaurant)
                 <div class="row mx-5 justify-content-center bg-form">
-                    <div class="col-5 my-3">
+                    <div class="col-lg-6 col-md-10 col-sm-12 my-3">
                         <div class="card">
                             <img src="{{ asset('storage/' . $restaurant['cover_img']) }}" class="card-img-top" alt="...">
                             <div class="card-body">

@@ -24,7 +24,7 @@
                 @csrf
 
         {{-- INPUT NOME --}}
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <label for="text" class="form-label">Name *</label>
                     <input type="text" placeholder="Name of the Dish" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
 
@@ -38,7 +38,7 @@
                 </div>
 
         {{-- INPUT IMMAGINE --}}
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12">
                     <label for="" class="form-label">Cover Image *</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}

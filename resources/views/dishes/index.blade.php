@@ -30,10 +30,10 @@
             @foreach ( $dishes as $dish )
                 @if($dish->show == 1)
                     
-                <div class="col-3 my-3">
+                <div class="my-3 col-lg-3 col-md-6 col-sm-10">
                     <div class="card h-100 bg-form">
                         <div class="card-header" style="border-bottom: 0;">
-                            <h5 class="card-title mt-3"><b>Piatto N° </b>{{$dish->id}}</h5>
+                            <h5 class="card-title mt-3 text-center"><b>Piatto N° </b>{{$dish->id}}</h5>
                             <div>
                                 <div class="card card-body body-bg" style="border: 0;">
                                     <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top asp-ratio" alt="...">
@@ -44,8 +44,8 @@
                                         <p class="card-text"><b>Prezzo: </b>€{{$dish->price}}</p>
                                         <p><b>Mostra: </b>{{$dish->show == true ? 'on' : 'off'}}</p>
                                     </div>
-                                    <div class="card-body">
-                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
+                                    <div class="card-body d-flex justify-content-between">
+                                        <button class="btn btn-info mt-3 text-white border-0"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
 
                                         <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST">
                                             @csrf
@@ -69,10 +69,10 @@
             @foreach ( $dishes as $dish )
                 @if($dish->show == 0)
                     
-                <div class="col-3 my-3">
+                <div class="col-lg-3 col-md-6 col-sm-10 my-3">
                     <div class="card h-100 bg-form">
                         <div class="card-header" style="border-bottom: 0;">
-                            <h5 class="card-title mt-3"><b>Piatto N° </b>{{$dish->id}}</h5>
+                            <h5 class="card-title mt-3 text-center"><b>Piatto N° </b>{{$dish->id}}</h5>
                             <div>
                                 <div class="card card-body body-bg" style="border: 0;">
                                     <img src="{{ asset('storage/' . $dish->cover_img) }}" class="card-img-top h-50" alt="...">
@@ -83,8 +83,8 @@
                                         <p class="card-text"><b>Prezzo: </b>€{{$dish->price}}</p>
                                         <p><b>Mostra: </b>{{$dish->show == true ? 'on' : 'off'}}</p>
                                     </div>
-                                    <div class="card-body">
-                                        <button class="btn btn-info"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
+                                    <div class="card-body  d-flex justify-content-between">
+                                        <button class="btn btn-info mt-3 text-white border-0"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none">Modifica</a></button>
 
                                         <form action="{{ route('dishes.destroy', $dish->id) }}" method="POST">
                                             @csrf

@@ -36,7 +36,7 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-8 col-md-8 col-sm-6">
             <div class="card mt-5 bg-success text-white me-3">
                 <div class="card-header fw-bold">{{ __('I Tuoi Dati') }}</div>
 
