@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurant;
 use App\Models\Type;
+use App\Models\Dish;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -80,9 +81,16 @@ class RestaurantController extends Controller
      */
     public function show($id)
     {
+
+        $dishes = Dish::where('restaurant_id', $id)
+        ->get();
+
         $restaurant = Restaurant::findOrFail($id);
-        // dd($restaurant);
-        return response()->json($restaurant);
+        // $dishes = Dish::all();
+        return response()->json([
+            'restaurant' => $restaurant,
+            'dishes' => $dishes
+        ]);    
     }
 
     /**

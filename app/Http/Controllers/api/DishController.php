@@ -14,13 +14,11 @@ class DishController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($id)
+    public function index()
     {
-        $dishes = Dish::where('restaurant_id', $id)->get();
-        $restaurant = Restaurant::where('id', $id)->get();
+        $dishes = Dish::all();
         return response()->json([
             'dishes' => $dishes,
-            'restaurant' => $restaurant
         ]);
     }
 
