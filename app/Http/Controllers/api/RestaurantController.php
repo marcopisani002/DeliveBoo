@@ -81,15 +81,8 @@ class RestaurantController extends Controller
     public function show($id)
     {
         $restaurant = Restaurant::findOrFail($id);
-        $restaurant_id = Auth::user()->restaurant->id;
-
-        if ($restaurant_id !== $restaurant->restaurant_id) {
-            abort(403);
-        }
-        return response()->json([
-            'restaurant' => $restaurant,
-            'restaurant_id' => $restaurant_id,
-        ]);
+        // dd($restaurant);
+        return response()->json($restaurant);
     }
 
     /**
