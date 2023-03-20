@@ -4,18 +4,24 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Dish;
+use App\Models\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
 
 class DishController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($id)
     {
-        $dishes = Dish::all();
-        return response()->json($dishes);
+        $dishes = Dish::where('restaurant_id', $id)->get();
+        $restaurant = Restaurant::where('id', $id)->get();
+        return response()->json([
+            'dishes' => $dishes,
+            'restaurant' => $restaurant
+        ]);
     }
 
     /**
@@ -41,7 +47,7 @@ class DishController extends Controller
         ]);
 
         if($request->has("cover_img")){
-            $data["cover_img"] = Storage::put("/dish-check", $data["cover_img"]);
+            $data["cover_img"] = Storage::put("/dishes", $data["cover_img"]);
         }
 
         $newDish = Dish::create($data);

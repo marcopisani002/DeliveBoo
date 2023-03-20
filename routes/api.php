@@ -3,7 +3,6 @@
 
 use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\RestaurantController;
-use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\TypeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +30,6 @@ Route::get("/restaurants/types/{type}",[RestaurantController::class,"TypeSearch"
 
 Route::get("/types", [TypeController::class, "index"]);
 
-Route::post('/register', [AuthController::class, "register"]);
-
 Route::get("/dishes", [DishController::class, "index"]);
+Route::get("/dishes/{dish}", [DishController::class, "show"]);
 //order.store = which is a form whre the customer put his information (the checkout step)
