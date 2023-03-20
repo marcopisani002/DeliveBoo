@@ -20,13 +20,13 @@
         <div class="col-12 mt-5 justify-content-center bg-form">
 
         {{-- INIZIO FORM --}}
-            <form action=" {{route('dishes.store') }} " class="row g-3" method="POST" enctype="multipart/form-data">
+            <form action=" {{route('dishes.store') }} " class="row g-3 p-3 py-4" method="POST" enctype="multipart/form-data">
                 @csrf
 
         {{-- INPUT NOME --}}
                 <div class="col-md-6 col-sm-12">
-                    <label for="text" class="form-label">Name *</label>
-                    <input type="text" placeholder="Name of the Dish" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
+                    <label for="text" class="form-label">Nome *</label>
+                    <input type="text" placeholder="Nome del piatto" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
 
                     {{-- Messaggio  --}}
                     @error('name')
@@ -39,7 +39,7 @@
 
         {{-- INPUT IMMAGINE --}}
                 <div class="col-md-6 col-sm-12">
-                    <label for="" class="form-label">Cover Image *</label>
+                    <label for="" class="form-label">Immagine di copertina *</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
 
@@ -53,8 +53,8 @@
 
         {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="text" class="form-label">Description *</label>
-                    <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror" placeholder="Description" name="description">{{ old('description') }}</textarea>
+                    <label for="text" class="form-label">Descrizione *</label>
+                    <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror" placeholder="Descrizione" name="description">{{ old('description') }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('description')
@@ -63,7 +63,7 @@
                     </div>
                     @elseif(old('description'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
 
@@ -71,8 +71,8 @@
 
             {{-- INPUT INGREDIENTS--}}
                 <div class="col-12">
-                    <label for="text" class="form-label">Ingredients *</label>
-                    <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Ingredients" name="ingredients">{{ old('ingredients') }}</textarea>
+                    <label for="text" class="form-label">Ingredienti *</label>
+                    <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror" placeholder="Ingredienti" name="ingredients">{{ old('ingredients') }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('ingredients')
@@ -81,7 +81,7 @@
                     </div>
                     @elseif(old('ingredients'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
 
@@ -89,8 +89,9 @@
 
         {{-- INPUT PRICE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Price *</label>
-                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror" name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="Price" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
+                    <label for="" class="form-label">Prezzo *</label>
+                    <input type="number" step='.01' class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror"
+                    name="price" value="{{ $errors->has('price') ? '' : old('price') }}" id="" placeholder="Prezzo" name="price" value="{{ $errors->has('price') ? '' : old('price') }}">
 
                     {{-- Messaggio  --}}
                     @error('price')
@@ -99,26 +100,26 @@
                     </div>
                     @elseif(old('price'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
                 </div>
                 
 
                 {{-- HIDE --}}
-                <div class="form-check form-switch">
-                    <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
+                <div class="form-check form-switch m-left">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Mostra</label>
                     <input onclick="checkboxClicked()" class="form-check-input checked" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault">
                 </div>
 
 
         {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Salva</button>
 
                     <button class="btn bg-warning m-3">
                         <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
-                            Back 
+                            Torna ai Piatti/Menu
                         </a>
                     </button>
                 </div>

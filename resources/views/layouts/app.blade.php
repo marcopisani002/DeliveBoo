@@ -27,8 +27,8 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-orange  shadow-sm">
-            <div class="container">
+        <nav class="navbar navbar-expand-md navbar-orange shadow-sm">
+            <div class="container-fluid justify-content-around">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo_laravel">
                         <img class="logo_laravel" src="{{ asset('storage/' . 'logo/Logo.jpeg')}}" alt="logo">

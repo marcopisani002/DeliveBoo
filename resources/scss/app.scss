@@ -41,6 +41,11 @@ img{
     width: 100%;
 }
 
+.card-img-top {
+    border-bottom-left-radius: var(--bs-card-inner-border-radius);
+    border-bottom-right-radius: var(--bs-card-inner-border-radius);
+}
+
 #style-links {
     color: white;
     text-decoration: none;
@@ -63,4 +68,17 @@ img{
 
 .asp-ratio {
     aspect-ratio: 1.5 / 1;
+}
+
+.m-left {
+    margin-left: 12px;
+}
+
+.text-grey {
+    opacity: .8
+;}
+
+.form-check-input:checked {
+    background-color: rgb(25,135,84);
+    border-color: rgb(25,135,84);
 }

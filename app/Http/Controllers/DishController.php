@@ -171,8 +171,12 @@ class DishController extends Controller
      */
     public function destroy($slug)
         {
+            $user = Auth::user();
             $restaurant_id = Auth::user()->restaurant->id;
-            $dish = Dish::findOrFail($slug);
+            $dish_array = Dish::where('restaurant_id', $user->id)
+            ->where('slug', $slug)
+            ->get(); 
+            $dish = $dish_array[0];           
 
             if ($restaurant_id !== $dish->restaurant_id) {
                 abort(403);

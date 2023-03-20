@@ -26,7 +26,7 @@
 
         {{-- INPUT NOME --}}
                 <div class="col-md-6">
-                    <label for="text" class="form-label">Name</label>
+                    <label for="text" class="form-label">Nome</label>
                     <input type="text" class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror" id="" name="name" 
                     value="{{ old('name', $dish->name) }}">
 
@@ -37,7 +37,7 @@
                     </div>
                     @elseif(old('name'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
 
@@ -45,7 +45,7 @@
 
         {{-- INPUT IMMAGINE --}}
                 <div class="col-md-6">
-                    <label for="" class="form-label">Cover Image</label>
+                    <label for="" class="form-label">Immagine di copertina</label>
                     <input type="file"  class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror" name="cover_img" >
                     {{-- Messaggio  --}}
                     @error('cover_img')
@@ -58,9 +58,9 @@
 
         {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Description</label>
+                    <label for="" class="form-label">Descrizione</label>
                     <textarea type="text" cols="30" rows="5" class="form-control  @error('description') is-invalid @enderror"
-                    placeholder="Description" name="description">{{ old('description', $dish->description) }}</textarea>
+                    name="description">{{ old('description', $dish->description) }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('description')
@@ -69,7 +69,7 @@
                     </div>
                     @elseif(old('description'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
 
@@ -77,9 +77,9 @@
 
             {{-- INPUT DESCRIZIONE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Ingredients</label>
+                    <label for="" class="form-label">Ingredienti</label>
                     <textarea type="text" cols="30" rows="5" class="form-control  @error('ingredients') is-invalid @enderror"
-                    placeholder="Ingredients" name="ingredients">{{ old('ingredients', $dish->ingredients) }}</textarea>
+                    name="ingredients">{{ old('ingredients', $dish->ingredients) }}</textarea>
 
                     {{-- Messaggio  --}}
                     @error('ingredients')
@@ -88,7 +88,7 @@
                     </div>
                     @elseif(old('ingredients'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
 
@@ -96,9 +96,9 @@
 
         {{-- INPUT PRICE --}}
                 <div class="col-12">
-                    <label for="" class="form-label">Price</label>
+                    <label for="" class="form-label">Prezzo</label>
                     <input type="number" step=".01"  class="form-control @error('price') is-invalid @elseif(old('price')) is-valid @enderror"
-                    name="price" value="{{ old('price', $dish->price) }}" id="" placeholder="price">
+                    name="price" value="{{ old('price', $dish->price) }}" id="">
 
                     {{-- Messaggio  --}}
                     @error('price')
@@ -107,24 +107,24 @@
                     </div>
                     @elseif(old('price'))
                     <div class="valid-feedback">
-                        Nice work dude!
+                        Ben fatto!
                     </div>
                     @enderror
                 </div>
 
-            <div class="form-check form-switch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Show</label>
+            <div class="form-check form-switch m-left">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Mostra</label>
                 <input onclick="checkboxClicked()" value='{{$dish->show}}' class="form-check-input" type="checkbox" name="show" role="switch" id="flexSwitchCheckDefault" 
                 {{ ( $dish->show == 0) ? '' : 'checked' }}>
             </div>
 
         {{-- PULSANTI: SUBMIT E BACK TO DASHBOARD --}}
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-success">Salva</button>
 
                     <button class="btn btn-warning m-3">
                         <a href="{{route('dishes.index')}}" class="text-decoration-none text-white">
-                            Back to Dishes/Menu
+                            Torna ai Piatti/Menu
                         </a>
                     </button>
                 </div>
