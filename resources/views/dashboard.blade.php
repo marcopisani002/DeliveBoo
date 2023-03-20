@@ -20,15 +20,15 @@
                 <div class="dropdown-menu bg-success">
                     @if ($restaurants->count() > 0)
                     @else
-                        <a class="dropdown-item text-center py-2" id='style-links'
-                            href="{{ route('restaurants.create') }}">Aggiungi Il Tuo Ristorante</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('restaurants.create') }}">
+                        Aggiungi Il Tuo Ristorante</a>
                     @endif
-                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('restaurants.index') }}">Il Tuo
-                        Ristorante</a>
-                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.index') }}">I Tuoi
-                        Piatti</a>
-                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.create') }}">Aggiungi un
-                        Piatto </a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('restaurants.index') }}">
+                        Il Tuo Ristorante</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.index') }}">
+                        I Tuoi Piatti</a>
+                    <a class="dropdown-item text-center py-2" id='style-links' href="{{ route('dishes.create') }}">
+                        Aggiungi un Piatto </a>
                 </div>
             </div>        
         </div>
@@ -54,7 +54,6 @@
                                 <th>Nome</th>
                                 <th>Cognome</th>
                                 <th>Email</th>
-
                             </tr>
                         </thead>
                         <tbody class="fw-bold">
