@@ -30,7 +30,7 @@
             @foreach ( $dishes as $dish )
                 @if($dish->show == 1)
                     
-                <div class="my-3 col-lg-3 col-md-6 col-sm-10">
+                <div class="my-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
                     <div class="card h-100 bg-form">
                         <div class="card-header" style="border-bottom: 0;">
                             <h5 class="card-title mt-3 text-center"><b>{{$dish->name}}</b></h5>
@@ -67,7 +67,7 @@
             @foreach ( $dishes as $dish )
                 @if($dish->show == 0)
                     
-                <div class="my-3 col-lg-3 col-md-6 col-sm-10">
+                <div class="my-3 col-xl-3 col-lg-4 col-md-6 col-sm-10">
                     <div class="card h-100 bg-form">
                         <div class="card-header" style="border-bottom: 0;">
                             <h5 class="card-title mt-3 text-center"><b>{{$dish->name}}</b></h5>
@@ -82,7 +82,7 @@
                                         <p><b class='text-grey'>Mostra: </b>{{$dish->show == true ? 'on' : 'off'}}</p>
                                     </div>
                                     <div class="card-body d-flex justify-content-evenly">
-                                        <button class="btn btn-success text-white border-0"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none text-white">Modifica</a></button>
+                                        <button class="btn btn-success text-white border-0 mx-3"> <a href="{{route('dishes.edit', $dish->slug)}}" class="text-decoration-none text-white">Modifica</a></button>
 
                                         <form action="{{ route('dishes.destroy', $dish->slug) }}" method="POST">
                                             @csrf
