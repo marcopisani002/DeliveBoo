@@ -11,17 +11,17 @@
                     <label class="form-label">Nome *</label>
                     <input type="text"
                         class="form-control @error('name') is-invalid @elseif(old('name')) is-valid @enderror"
-                        name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
+                        placeholder="Nome del ristorante" name="name" value="{{ $errors->has('name') ? '' : old('name') }}">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Numero di telefono *</label>
                     <input type="number"
                         class="form-control @error('phone_number') is-invalid @elseif(old('phone_number')) is-valid @enderror"
-                        name="phone_number" value="{{ $errors->has('phone_number') ? '' : old('phone_number') }}">
+                        placeholder="Numero di telefono" name="phone_number" value="{{ $errors->has('phone_number') ? '' : old('phone_number') }}">
 
                     <div class="mb-3">
-                        <label class="form-label">Cover Image *</label>
+                        <label class="form-label">Immagine di copertina *</label>
                         <input type="file"
                             class="form-control @error('cover_img') is-invalid @elseif('cover_img')  @enderror"
                             name="cover_img">
@@ -39,14 +39,14 @@
                         <label class="form-label">P.IVA *</label>
                         <input type="number"
                             class="form-control @error('vat') is-invalid @elseif(old('vat')) is-valid @enderror"
-                            name="vat" value="{{ $errors->has('vat') ? '' : old('vat') }}">
+                            placeholder="N° della tua partita IVA" name="vat" value="{{ $errors->has('vat') ? '' : old('vat') }}">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Indirizzo *</label>
                         <input type="text"
                             class="form-control @error('address') is-invalid @elseif(old('address')) is-valid @enderror"
-                            name="address" value="{{ $errors->has('address') ? '' : old('address') }}">
+                            placeholder="Indirizzo del ristorante" name="address" value="{{ $errors->has('address') ? '' : old('address') }}">
                     </div>
 
                 <div class="mb-3">
