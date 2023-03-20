@@ -8,6 +8,7 @@ use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 
 class RestaurantController extends Controller
@@ -64,8 +65,9 @@ class RestaurantController extends Controller
             'address' => 'required|string',
         ]);
 
+
         if($request->has("cover_img")){
-            $data["cover_img"] = Storage::put("/restaurant-check", $data["cover_img"]);
+            $data["cover_img"] = Storage::put("/restaurant", $data["cover_img"]);
         }
 
         $newRestaurant = Restaurant::create($data);
@@ -79,12 +81,8 @@ class RestaurantController extends Controller
     public function show($id)
     {
         $restaurant = Restaurant::findOrFail($id);
-        $restaurant_id = Auth::user()->restaurant->id;
-
-        if ($restaurant_id !== $restaurant->restaurant_id) {
-            abort(403);
-        }
-        return view('restaurants.show', compact('restaurant'));
+        // dd($restaurant);
+        return response()->json($restaurant);
     }
 
     /**

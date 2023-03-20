@@ -80,6 +80,7 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
+        
         $types = Type::all();
         return view ('restaurants.show', compact('restaurant','types'));
     }
