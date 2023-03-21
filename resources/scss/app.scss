@@ -20,6 +20,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: auto;
 }
 
 .bg-form{
@@ -79,8 +80,8 @@ img{
 }
 
 .text-grey {
-    opacity: .8
-;}
+    opacity: .8;
+}
 
 .form-check-input:checked {
     background-color: rgb(25,135,84);
@@ -101,5 +102,5 @@ form label {
 
 .box{
     margin-top: 5rem;
-    color: #ef3d17;
+    color: #ef500f;
 }
