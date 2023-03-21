@@ -3,10 +3,10 @@
     <div class="container">
         <div class="d-flex justify-content-between">
             <div>
-                <h4 class="fs-4 text-white my-4">Benvenuto <strong> {{ Auth::user()->name }}
+                <h4 class="fs-4 green-text my-4">Benvenuto <strong> {{ Auth::user()->name }}
                     {{ Auth::user()->surname }}!</strong></h4>
                 @if ($restaurants->count() == 0)
-                <a class='text-white text-decoration-none' href="{{ route('restaurants.create') }}">
+                <a class='green-text text-decoration-none' href="{{ route('restaurants.create') }}">
                     <b>Vuoi aggiungere il tuo ristorante?</b>
                 </a>
                 @endif
