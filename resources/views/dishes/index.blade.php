@@ -25,7 +25,7 @@
         
         <div class="row mx-5">
             @if(count($dishes) > 0)
-            <h1 class='text-white'>Piatti Abilitati</h1>
+            <h1 class='green-text'>Piatti Abilitati</h1>
             @endif
             @foreach ( $dishes as $dish )
                 @if($dish->show == 1)
@@ -62,7 +62,7 @@
             @endforeach
             
             @if(count($dishes) > 0)
-            <h1 class='text-white'>Piatti Disabilitati</h1>
+            <h1 class='green-text'>Piatti Disabilitati</h1>
             @endif            
             @foreach ( $dishes as $dish )
                 @if($dish->show == 0)
