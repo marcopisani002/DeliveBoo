@@ -14,8 +14,12 @@
 }
 
 .body-bg{
-    background: var(--background);
-    background: var(--background-gradient);
+    background-image: url('/public/storage/logo/bg-grass-plant.jpg');
+    display: block;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .bg-form{
@@ -93,4 +97,9 @@ form label {
 
 .p10 {
     padding: 10px;
+}
+
+.box{
+    margin-top: 5rem;
+    color: #ef3d17;
 }

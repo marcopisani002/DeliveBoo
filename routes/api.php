@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Api\ContactController;
 use App\Http\Controllers\Api\DishController;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\TypeController;
@@ -32,4 +32,6 @@ Route::get("/types", [TypeController::class, "index"]);
 
 Route::get("/dishes", [DishController::class, "index"]);
 Route::get("/dishes/{dish}", [DishController::class, "show"]);
+
+Route::post("/contacts", [ContactController::class, "store"]);
 //order.store = which is a form whre the customer put his information (the checkout step)
